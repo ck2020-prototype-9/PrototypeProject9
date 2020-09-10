@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -15,16 +16,18 @@ public class PlayerCharacterController : MonoBehaviour
     [SerializeField] HingeJoint rightLegJoint;
 
     [Header("Leg")]
-    [SerializeField] float legSpeedScale = 10f;
-    [SerializeField] float legSmoothTime = 0.2f;
-    [SerializeField] float legResetSpeed = 10f;
+    [SerializeField] float legSpeedScale = 0.5f;
+    [SerializeField] float legSmoothTime = 0.1f;
+    [SerializeField] float legResetSpeed = 45f;
 
     [Header("Balance")]
-    [SerializeField] float balanceControlScale = 1f;
-    [SerializeField] float balanceControlSmoothTime = 0.2f;
+    [SerializeField] float balanceControlScale = 171f;
+    [SerializeField] float balanceControlSmoothTime = 0.05f;
 
     [Header("Auto Adjust")]
-    [SerializeField] float adjustFactor = 2;
+    [SerializeField] float xAdjustFactor = 1422.64f;
+    [SerializeField] float yAdjustFactor = 100;
+    [SerializeField] float zAdjustFactor = 711.32f;
 
     #region Input Values
     bool leftLegInput;
@@ -156,7 +159,7 @@ public class PlayerCharacterController : MonoBehaviour
         var up = bodyRigidBody.transform.up;
         if (up.y > 0.6)
         {
-            bodyRigidBody.AddForce(new Vector3(-up.x * adjustFactor, 0, -up.z * adjustFactor) * Time.deltaTime);
+            bodyRigidBody.AddForce(new Vector3(-up.x * xAdjustFactor, yAdjustFactor, -up.z * zAdjustFactor) * Time.deltaTime);
 
 
             // 회전 방향 보정
