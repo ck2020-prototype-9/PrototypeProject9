@@ -24,7 +24,6 @@ public class PlayerCharacterController : MonoBehaviour
     [SerializeField] float balanceControlSmoothTime = 0.2f;
 
     [Header("Auto Adjust")]
-    [Range(0, 10)]
     [SerializeField] float adjustFactor = 2;
 
     #region Input Values
@@ -87,7 +86,7 @@ public class PlayerCharacterController : MonoBehaviour
         // 왼쪽 다리
         if (leftLegInput)
         {
-            targetLeftLegRotation += mouseYDelta * legSpeedScale * Time.deltaTime;
+            targetLeftLegRotation += mouseYDelta * legSpeedScale;
         }
         // 왼쪽 다리 리셋
         if (targetLeftLegRotation > 0.1f)
@@ -103,7 +102,7 @@ public class PlayerCharacterController : MonoBehaviour
         // 오른쪽 다리
         if (rightLegInput)
         {
-            targetRightLegRotation += mouseYDelta * legSpeedScale * Time.deltaTime;
+            targetRightLegRotation += mouseYDelta * legSpeedScale;
         }
         // 오른쪽 다리 리셋
         if (targetRightLegRotation > 0.1f)
@@ -133,16 +132,21 @@ public class PlayerCharacterController : MonoBehaviour
 
         if (characterBalanceInput.sqrMagnitude > DeadZone * DeadZone)
         {
-            targetBalanceVelocity = characterBalanceInput * balanceControlScale;
+            targetBalanceVelocity = characterBalanceInput * balanceControlScale * Time.deltaTime;
         }
         else
         {
             targetBalanceVelocity = Vector2.zero;
         }
 
+        var forward = bodyRigidBody.transform.forward;
+        var right = bodyRigidBody.transform.right;
+        Debug.Log($"forward: {forward}, forward.z: {forward.z}");
+        Debug.Log($"right: {right}, right.x: {right.x}");
+
         currentBalanceVelocity = Vector2.SmoothDamp(currentBalanceVelocity, targetBalanceVelocity, ref balanceVelocitySmooth, balanceControlSmoothTime);
 
-        bodyRigidBody.AddForce(new Vector3(currentBalanceVelocity.x, 0, currentBalanceVelocity.y));
+        bodyRigidBody.AddForce(new Vector3(currentBalanceVelocity.x * right.x + currentBalanceVelocity.y * forward.x, 0, currentBalanceVelocity.y * forward.z + currentBalanceVelocity.x * right.z));
     }
 
     private void AutoAdjustUpdate()
@@ -150,15 +154,23 @@ public class PlayerCharacterController : MonoBehaviour
         // 보정
         // 각도 만큼 좀더 밀어주기
         var up = bodyRigidBody.transform.up;
-        if (up.y > 0.4)
+        if (up.y > 0.6)
         {
-            bodyRigidBody.AddForce(new Vector3(-up.x * adjustFactor, 0, -up.z * adjustFactor));
+            bodyRigidBody.AddForce(new Vector3(-up.x * adjustFactor, 0, -up.z * adjustFactor) * Time.deltaTime);
+
+
+            // 회전 방향 보정
+            var forward = bodyRigidBody.transform.forward;
+            //Debug.Log(forward);
+            var quaternion = bodyRigidBody.rotation;
+            var rotation = quaternion.eulerAngles;
+            rotation.y = 0;
+            quaternion.eulerAngles = rotation;
+            bodyRigidBody.rotation = quaternion;
         }
         else
         {
             Debug.Log("game over");
         }
-
-        // 회전 방향 보정
     }
 }
