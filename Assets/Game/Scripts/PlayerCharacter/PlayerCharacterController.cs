@@ -19,6 +19,8 @@ public class PlayerCharacterController : MonoBehaviour
     [SerializeField] float legSpeedScale = 0.5f;
     [SerializeField] float legSmoothTime = 0.1f;
     [SerializeField] float legResetSpeed = 45f;
+    [SerializeField] float legMinAngle = -90;
+    [SerializeField] float legMaxAngle = 90;
 
     [Header("Balance")]
     [SerializeField] float balanceControlScale = 171f;
@@ -92,12 +94,14 @@ public class PlayerCharacterController : MonoBehaviour
         {
             targetLeftLegRotation += mouseYDelta * legSpeedScale;
         }
+        targetLeftLegRotation = Mathf.Clamp(targetLeftLegRotation, legMinAngle, legMaxAngle);
 
         // 오른쪽 다리
         if (rightLegInput)
         {
             targetRightLegRotation += mouseYDelta * legSpeedScale;
         }
+        targetRightLegRotation = Mathf.Clamp(targetRightLegRotation, legMinAngle, legMaxAngle);
 
         // 왼쪽 다리 리셋
         if (targetLeftLegRotation > 0.1f)
