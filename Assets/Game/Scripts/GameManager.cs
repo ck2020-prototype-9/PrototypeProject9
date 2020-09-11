@@ -5,8 +5,17 @@ using UnityEngine.InputSystem;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance { get; private set; }
 
-    public void Update()
+    public bool IsGameOver { get; set; }
+
+    private void Awake()
+    {
+        if (Instance == null)
+            Instance = this;
+    }
+
+    private void Update()
     {
         // 씬 리셋
         if (Keyboard.current[Key.R].wasPressedThisFrame)

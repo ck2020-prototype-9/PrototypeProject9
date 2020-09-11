@@ -57,13 +57,13 @@ public class PlayerCharacterController : MonoBehaviour
     public void OnLeftLegInput(InputAction.CallbackContext context)
     {
         leftLegInput = context.ReadValueAsButton();
-        Debug.Log("leftLeg");
+        //Debug.Log("leftLeg");
     }
 
     public void OnRightLegInput(InputAction.CallbackContext context)
     {
         rightLegInput = context.ReadValueAsButton();
-        Debug.Log("rightLeg");
+        //Debug.Log("rightLeg");
     }
 
     public void OnMouseYDeltaInput(InputAction.CallbackContext context)
@@ -91,6 +91,13 @@ public class PlayerCharacterController : MonoBehaviour
         {
             targetLeftLegRotation += mouseYDelta * legSpeedScale;
         }
+
+        // 오른쪽 다리
+        if (rightLegInput)
+        {
+            targetRightLegRotation += mouseYDelta * legSpeedScale;
+        }
+
         // 왼쪽 다리 리셋
         if (targetLeftLegRotation > 0.1f)
         {
@@ -102,11 +109,6 @@ public class PlayerCharacterController : MonoBehaviour
         }
         currentLeftLegRotation = Mathf.SmoothDamp(currentLeftLegRotation, targetLeftLegRotation, ref leftLegRotationSmooth, legSmoothTime);
 
-        // 오른쪽 다리
-        if (rightLegInput)
-        {
-            targetRightLegRotation += mouseYDelta * legSpeedScale;
-        }
         // 오른쪽 다리 리셋
         if (targetRightLegRotation > 0.1f)
         {
@@ -133,23 +135,26 @@ public class PlayerCharacterController : MonoBehaviour
     {
         const float DeadZone = 0.1f;
 
-        if (characterBalanceInput.sqrMagnitude > DeadZone * DeadZone)
+        if (!GameManager.Instance.IsGameOver)
         {
-            targetBalanceVelocity = characterBalanceInput * balanceControlScale * Time.deltaTime;
+            if (characterBalanceInput.sqrMagnitude > DeadZone * DeadZone)
+            {
+                targetBalanceVelocity = characterBalanceInput * balanceControlScale * Time.deltaTime;
+            }
+            else
+            {
+                targetBalanceVelocity = Vector2.zero;
+            }
+
+            var forward = bodyRigidBody.transform.forward;
+            var right = bodyRigidBody.transform.right;
+            //Debug.Log($"forward: {forward}, forward.z: {forward.z}");
+            //Debug.Log($"right: {right}, right.x: {right.x}");
+
+            currentBalanceVelocity = Vector2.SmoothDamp(currentBalanceVelocity, targetBalanceVelocity, ref balanceVelocitySmooth, balanceControlSmoothTime);
+
+            bodyRigidBody.AddForce(new Vector3(currentBalanceVelocity.x * right.x + currentBalanceVelocity.y * forward.x, 0, currentBalanceVelocity.y * forward.z + currentBalanceVelocity.x * right.z));
         }
-        else
-        {
-            targetBalanceVelocity = Vector2.zero;
-        }
-
-        var forward = bodyRigidBody.transform.forward;
-        var right = bodyRigidBody.transform.right;
-        Debug.Log($"forward: {forward}, forward.z: {forward.z}");
-        Debug.Log($"right: {right}, right.x: {right.x}");
-
-        currentBalanceVelocity = Vector2.SmoothDamp(currentBalanceVelocity, targetBalanceVelocity, ref balanceVelocitySmooth, balanceControlSmoothTime);
-
-        bodyRigidBody.AddForce(new Vector3(currentBalanceVelocity.x * right.x + currentBalanceVelocity.y * forward.x, 0, currentBalanceVelocity.y * forward.z + currentBalanceVelocity.x * right.z));
     }
 
     private void AutoAdjustUpdate()
@@ -157,7 +162,7 @@ public class PlayerCharacterController : MonoBehaviour
         // 보정
         // 각도 만큼 좀더 밀어주기
         var up = bodyRigidBody.transform.up;
-        if (up.y > 0.6)
+        if (!GameManager.Instance.IsGameOver)
         {
             bodyRigidBody.AddForce(new Vector3(-up.x * xAdjustFactor, yAdjustFactor, -up.z * zAdjustFactor) * Time.deltaTime);
 
