@@ -28,6 +28,7 @@ public class PlayerCharacterController : MonoBehaviour
     [SerializeField] float xAdjustFactor = 1422.64f;
     [SerializeField] float yAdjustFactor = 100;
     [SerializeField] float zAdjustFactor = 711.32f;
+    [SerializeField] float yRotateAdjustFactor = 20;
 
     #region Input Values
     bool leftLegInput;
@@ -170,11 +171,16 @@ public class PlayerCharacterController : MonoBehaviour
             // 회전 방향 보정
             var forward = bodyRigidBody.transform.forward;
             //Debug.Log(forward);
-            var quaternion = bodyRigidBody.rotation;
-            var rotation = quaternion.eulerAngles;
-            rotation.y = 0;
-            quaternion.eulerAngles = rotation;
-            bodyRigidBody.rotation = quaternion;
+            var rotation = bodyRigidBody.rotation;
+
+            var eulerAngle = rotation.eulerAngles;
+            float yAngle = eulerAngle.y;
+            if (yAngle > 180)
+            {
+                yAngle -= 360;
+            }
+
+            bodyRigidBody.AddTorque(up * -yAngle * yRotateAdjustFactor * Time.deltaTime);
         }
         else
         {
