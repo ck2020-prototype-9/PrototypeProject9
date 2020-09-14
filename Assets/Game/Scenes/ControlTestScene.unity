@@ -1727,8 +1727,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 621953787255480887}
-  - component: {fileID: 3110774489071084764}
-  - component: {fileID: 3110774489071084765}
   m_Layer: 0
   m_Name: Bip001 Spine4
   m_TagString: Untagged
@@ -1736,57 +1734,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &3110774489071084764
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3110774489071084763}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!59 &3110774489071084765
-HingeJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3110774489071084763}
-  m_ConnectedBody: {fileID: 3186005114762265395}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 0, y: 0, z: 1}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.14882468, y: -0.00011854355, z: 9.860579e-10}
-  m_UseSpring: 1
-  m_Spring:
-    spring: 100
-    damper: 0.25
-    targetPosition: 0
-  m_UseMotor: 0
-  m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
-  m_UseLimits: 0
-  m_Limits:
-    min: 0
-    max: 0
-    bounciness: 0
-    bounceMinVelocity: 0.2
-    contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!1 &3186005114762265394
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,8 +1743,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2442788312665694675}
-  - component: {fileID: 3186005114762265395}
-  - component: {fileID: 3186005114762265396}
   m_Layer: 0
   m_Name: Bip001 Spine3
   m_TagString: Untagged
@@ -1805,57 +1750,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &3186005114762265395
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3186005114762265394}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!59 &3186005114762265396
-HingeJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3186005114762265394}
-  m_ConnectedBody: {fileID: 7626296689251761035}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 0, y: 0, z: 1}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.14882442, y: -0.00011847418, z: 6.573719e-10}
-  m_UseSpring: 1
-  m_Spring:
-    spring: 100
-    damper: 0.25
-    targetPosition: 0
-  m_UseMotor: 0
-  m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
-  m_UseLimits: 0
-  m_Limits:
-    min: 0
-    max: 0
-    bounciness: 0
-    bounceMinVelocity: 0.2
-    contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!1 &3243160715273804517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2056,8 +1950,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4774890965684444617}
   - component: {fileID: 6456099579563665044}
-  - component: {fileID: 6456099579563665046}
-  - component: {fileID: 6456099579563665045}
   m_Layer: 0
   m_Name: Bip001 Spine6
   m_TagString: Untagged
@@ -2078,57 +1970,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.2
   m_Center: {x: 0.06, y: 0, z: 0}
---- !u!59 &6456099579563665045
-HingeJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6456099579563665043}
-  m_ConnectedBody: {fileID: 6465671673578944063}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 0, y: 0, z: 1}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.14882462, y: -0.00011844349, z: 0.0000000016434298}
-  m_UseSpring: 1
-  m_Spring:
-    spring: 100
-    damper: 0.25
-    targetPosition: 0
-  m_UseMotor: 0
-  m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
-  m_UseLimits: 0
-  m_Limits:
-    min: 0
-    max: 0
-    bounciness: 0
-    bounceMinVelocity: 0.2
-    contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
---- !u!54 &6456099579563665046
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6456099579563665043}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &6465671673578944062
 GameObject:
   m_ObjectHideFlags: 0
@@ -2138,8 +1979,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7030395777456700285}
-  - component: {fileID: 6465671673578944063}
-  - component: {fileID: 6465671673578944064}
   m_Layer: 0
   m_Name: Bip001 Spine5
   m_TagString: Untagged
@@ -2147,57 +1986,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &6465671673578944063
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6465671673578944062}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!59 &6465671673578944064
-HingeJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6465671673578944062}
-  m_ConnectedBody: {fileID: 3110774489071084764}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 0, y: 0, z: 1}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.14882427, y: -0.00011849325, z: 0.0000000013147439}
-  m_UseSpring: 1
-  m_Spring:
-    spring: 100
-    damper: 0.25
-    targetPosition: 0
-  m_UseMotor: 0
-  m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
-  m_UseLimits: 0
-  m_Limits:
-    min: 0
-    max: 0
-    bounciness: 0
-    bounceMinVelocity: 0.2
-    contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!4 &6951921730890107513
 Transform:
   m_ObjectHideFlags: 0
@@ -2236,8 +2024,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354020671375005538}
-  - component: {fileID: 7626296689251761035}
-  - component: {fileID: 7626296689251761036}
   m_Layer: 0
   m_Name: Bip001 Spine2
   m_TagString: Untagged
@@ -2245,57 +2031,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!54 &7626296689251761035
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7626296689251761034}
-  serializedVersion: 2
-  m_Mass: 0.0000001
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!59 &7626296689251761036
-HingeJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7626296689251761034}
-  m_ConnectedBody: {fileID: 8414270717827158422}
-  m_Anchor: {x: 0, y: 0, z: 0}
-  m_Axis: {x: 0, y: 0, z: 1}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.00000042654574, y: -0.23350716, z: -0.00021803379}
-  m_UseSpring: 1
-  m_Spring:
-    spring: 100
-    damper: 0.25
-    targetPosition: 0
-  m_UseMotor: 0
-  m_Motor:
-    targetVelocity: 0
-    force: 0
-    freeSpin: 0
-  m_UseLimits: 0
-  m_Limits:
-    min: 0
-    max: 0
-    bounciness: 0
-    bounceMinVelocity: 0.2
-    contactDistance: 0
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!137 &7913366965969518257
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -2418,7 +2153,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
@@ -2446,11 +2181,11 @@ MonoBehaviour:
   legResetSpeed: 45
   legMinAngle: -90
   legMaxAngle: 90
-  balanceControlScale: 171
-  balanceControlSmoothTime: 0.05
-  xAdjustFactor: 1000
+  balanceControlScale: 200
+  balanceControlSmoothTime: 0.02
+  xAdjustFactor: 1300
   yAdjustFactor: 50
-  zAdjustFactor: 600
+  zAdjustFactor: 800
   yRotateAdjustFactor: 20
 --- !u!4 &8756926238418369812
 Transform:
