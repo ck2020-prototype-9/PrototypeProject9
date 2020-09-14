@@ -1,26 +1,60 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
+using System.IO;
+using System;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
 
-    public bool IsGameOver { get; set; }
+    [SerializeField] ConfigData configData = ConfigData.Default;
 
-    private void Awake()
+    public ConfigData ConfigData
     {
-        if (Instance == null)
-            Instance = this;
+        get => configData;
+        set => configData = value;
     }
 
-    private void Update()
+    public void ConfigSave()
     {
-        // 씬 리셋
-        if (Keyboard.current[Key.R].wasPressedThisFrame)
+        Debug.Log("설정 저장");
+        try
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            File.WriteAllText($"{Application.persistentDataPath}.config.dat", JsonUtility.ToJson(ConfigData));
         }
+        catch (Exception e)
+        {
+            Debug.LogWarning($"설정 저장 실패 : {e}");
+        }
+    }
+
+    public void ConfigLoad()
+    {
+        Debug.Log("설정 불러오기");
+        try
+        {
+            ConfigData = JsonUtility.FromJson<ConfigData>(File.ReadAllText($"{Application.persistentDataPath}.config.dat"));
+        }
+        catch (Exception e)
+        {
+            Debug.LogWarning($"설정 불러오기 실패 : {e}");
+        }
+    }
+
+    public void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+
+            Initialize();
+            DontDestroyOnLoad(this.gameObject);
+        }
+        Destroy(this.gameObject);
+    }
+
+    public void Initialize()
+    {
+        ConfigLoad();
     }
 }

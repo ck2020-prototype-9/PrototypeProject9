@@ -71,7 +71,7 @@ public class PlayerCharacterController : MonoBehaviour
 
     public void OnMouseYDeltaInput(InputAction.CallbackContext context)
     {
-        mouseYDelta = context.ReadValue<float>();
+        mouseYDelta = context.ReadValue<float>() * (GameManager.Instance.ConfigData.IsMouseYInverse ? -1 : 1);
     }
 
     public void OnCharacterBalanceInput(InputAction.CallbackContext context)
@@ -140,7 +140,7 @@ public class PlayerCharacterController : MonoBehaviour
     {
         const float DeadZone = 0.1f;
 
-        if (!GameManager.Instance.IsGameOver)
+        if (!GameStageManager.Instance.IsGameOver)
         {
             if (characterBalanceInput.sqrMagnitude > DeadZone * DeadZone)
             {
@@ -167,7 +167,7 @@ public class PlayerCharacterController : MonoBehaviour
         // 보정
         // 각도 만큼 좀더 밀어주기
         var up = bodyRigidBody.transform.up;
-        if (!GameManager.Instance.IsGameOver)
+        if (!GameStageManager.Instance.IsGameOver)
         {
             bodyRigidBody.AddForce(new Vector3(-up.x * xAdjustFactor, yAdjustFactor, -up.z * zAdjustFactor) * Time.deltaTime);
 

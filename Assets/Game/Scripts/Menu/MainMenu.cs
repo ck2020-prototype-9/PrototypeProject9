@@ -12,7 +12,8 @@ public enum ClickType
     Sound,
     OptionBack,
     TutorialBack,
-    Quit
+    Quit,
+    MouseInverse
 }
 public class MainMenu : MonoBehaviour
 {
@@ -52,21 +53,22 @@ public class MainMenu : MonoBehaviour
 
             case ClickType.Sound:
                 Debug.Log("사운드 조정");
-                if (!soundButtonCheck)
+                if (!GameManager.Instance.ConfigData.IsSoundMute)
                 {
                     textName.text = "소리 끄기";
-                    soundButtonCheck = true;
+                    GameManager.Instance.ConfigData.IsSoundMute = true;
                 }
                 else
                 {
                     textName.text = "소리 켜기";
-                    soundButtonCheck = false;
+                    GameManager.Instance.ConfigData.IsSoundMute = false;
                 }
                    
                 break;
 
             case ClickType.OptionBack:
                 Debug.Log("뒤로가기");
+                GameManager.Instance.ConfigSave();
                 CanvasGroupOn(mainGroup);
                 CanvasGroupOff(optionGroup);
                 break;
@@ -78,6 +80,19 @@ public class MainMenu : MonoBehaviour
                 break;
             case ClickType.Quit:
                 Application.Quit();
+                break;
+            case ClickType.MouseInverse:
+                Debug.Log("마우스 Y축 설정");
+                if (!GameManager.Instance.ConfigData.IsMouseYInverse)
+                {
+                    textName.text = "마우스 Y축 반전";
+                    GameManager.Instance.ConfigData.IsMouseYInverse = true;
+                }
+                else
+                {
+                    textName.text = "마우스 Y축 표준";
+                    GameManager.Instance.ConfigData.IsMouseYInverse = false;
+                }
                 break;
         }
     }
