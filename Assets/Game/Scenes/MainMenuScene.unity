@@ -1804,7 +1804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c8e08e853a6b644b209023626fe8fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentType: 4
+  currentType: 6
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   tutorialGroup: {fileID: 0}
