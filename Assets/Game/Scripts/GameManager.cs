@@ -50,7 +50,8 @@ public class GameManager : MonoBehaviour
             Initialize();
             DontDestroyOnLoad(this.gameObject);
         }
-        Destroy(this.gameObject);
+        else
+            Destroy(this.gameObject);
     }
 
     public void Initialize()
