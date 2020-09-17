@@ -5,14 +5,28 @@ using UnityEngine.InputSystem;
 
 public class GameStageManager : MonoBehaviour, IStageResettable
 {
-    [SerializeField] GameOverManager gameOverManager;
+    [SerializeField] DirectorManager gameOverDirectorManager;
     [SerializeField] PlayerCharacterManager playerCharacterManager;
     [SerializeField] FocusCameraManager focusCameraManager;
 
     public static GameStageManager Instance { get; private set; }
-    public GameOverManager GameOverManager => gameOverManager;
+    public DirectorManager GameOverDirectorManager => gameOverDirectorManager;
     public PlayerCharacterManager PlayerCharacterManager => playerCharacterManager;
     public FocusCameraManager FocusCameraManager => this.focusCameraManager;
+
+    bool isGameOver = false;
+    public bool IsGameOver
+    {
+        get => isGameOver;
+        set
+        {
+            if (isGameOver == false && value == true)
+            {
+                GameOverDirectorManager.StartDirecting();
+            }
+            isGameOver = value;
+        }
+    }
 
     private void Awake()
     {
@@ -32,7 +46,8 @@ public class GameStageManager : MonoBehaviour, IStageResettable
 
     public void StageReset()
     {
-        GameOverManager.StageReset();
+        IsGameOver = false;
+        GameOverDirectorManager.StageReset();
         PlayerCharacterManager.StageReset();
     }
 }
