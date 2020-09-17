@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GameOverManager : MonoBehaviour
+public class GameOverManager : MonoBehaviour, IStageResettable
 {
     [SerializeField] GameObject[] gameOverDirectorPrefabs;
+
+    GameObject gameOverDirectorObject;
 
     bool isGameOver = false;
     public bool IsGameOver
@@ -31,11 +33,18 @@ public class GameOverManager : MonoBehaviour
             var gameOverDirectorPrefab = gameOverDirectorPrefabs[index];
 
             // 디렉팅 시작 (자동 시작)
-            Instantiate(gameOverDirectorPrefab);
+            gameOverDirectorObject = Instantiate(gameOverDirectorPrefab);
         }
         else
         {
             Debug.LogWarning($"{nameof(gameOverDirectorPrefabs)}에 값이 할당되지 않았습니다.");
         }
     }
+
+    public void StageReset()
+    {
+        IsGameOver = false;
+        Destroy(gameOverDirectorObject);
+    }
+
 }

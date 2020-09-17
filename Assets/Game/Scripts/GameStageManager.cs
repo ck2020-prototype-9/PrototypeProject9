@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 
-public class GameStageManager : MonoBehaviour
+public class GameStageManager : MonoBehaviour, IStageResettable
 {
     [SerializeField] GameOverManager gameOverManager;
 
@@ -21,7 +21,12 @@ public class GameStageManager : MonoBehaviour
         // 씬 리셋
         if (Keyboard.current[Key.R].wasPressedThisFrame)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StageReset();
         }
+    }
+
+    public void StageReset()
+    {
+        GameOverManager.StageReset();
     }
 }
