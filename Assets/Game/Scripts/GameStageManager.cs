@@ -5,9 +5,10 @@ using UnityEngine.InputSystem;
 
 public class GameStageManager : MonoBehaviour
 {
-    public static GameStageManager Instance { get; private set; }
+    [SerializeField] GameOverManager gameOverManager;
 
-    public bool IsGameOver { get; set; }
+    public static GameStageManager Instance { get; private set; }
+    public GameOverManager GameOverManager { get => gameOverManager; }
 
     private void Awake()
     {

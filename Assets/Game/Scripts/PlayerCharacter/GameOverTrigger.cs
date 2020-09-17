@@ -11,7 +11,7 @@ namespace Assets.Game.Scripts
             {
                 // 게임오버 처리
 
-                GameStageManager.Instance.IsGameOver = true;
+                GameStageManager.Instance.GameOverManager.IsGameOver = true;
             }
         }
     }

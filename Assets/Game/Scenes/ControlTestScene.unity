@@ -3147,6 +3147,7 @@ GameObject:
   - component: {fileID: 1169213647}
   - component: {fileID: 1169213648}
   - component: {fileID: 1169213649}
+  - component: {fileID: 1169213650}
   m_Layer: 0
   m_Name: GameStageManager
   m_TagString: Untagged
@@ -3180,6 +3181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7cdeadd8a6dc87b488dd3ae87d8f8b63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameOverManager: {fileID: 1169213650}
 --- !u!114 &1169213649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3367,6 +3369,19 @@ MonoBehaviour:
   m_DefaultActionMap: PlayerCharacter
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1169213650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169213646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f54fb780efd83a408af8fe935295f15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverDirectorPrefabs: []
 --- !u!1 &1193841719
 GameObject:
   m_ObjectHideFlags: 0
@@ -5502,7 +5517,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.17999995, y: -0.49999928, z: 0.00000019920513}
+  m_ConnectedAnchor: {x: 0.122330956, y: -0.4999994, z: 0.00000037107782}
   m_UseSpring: 1
   m_Spring:
     spring: 30
@@ -5634,7 +5649,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 0, y: 0, z: 1}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -0.18000004, y: -0.49999976, z: 0.0000005935038}
+  m_ConnectedAnchor: {x: -0.12233103, y: -0.49999976, z: 0.0000004216311}
   m_UseSpring: 1
   m_Spring:
     spring: 30

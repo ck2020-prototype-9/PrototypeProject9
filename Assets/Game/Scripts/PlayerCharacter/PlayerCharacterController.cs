@@ -140,7 +140,7 @@ public class PlayerCharacterController : MonoBehaviour
     {
         const float DeadZone = 0.1f;
 
-        if (!GameStageManager.Instance.IsGameOver)
+        if (!GameStageManager.Instance.GameOverManager.IsGameOver)
         {
             if (characterBalanceInput.sqrMagnitude > DeadZone * DeadZone)
             {
@@ -167,7 +167,7 @@ public class PlayerCharacterController : MonoBehaviour
         // 보정
         // 각도 만큼 좀더 밀어주기
         var up = bodyRigidBody.transform.up;
-        if (!GameStageManager.Instance.IsGameOver)
+        if (!GameStageManager.Instance.GameOverManager.IsGameOver)
         {
             bodyRigidBody.AddForce(new Vector3(-up.x * xAdjustFactor, yAdjustFactor, -up.z * zAdjustFactor) * Time.deltaTime);
 
@@ -186,9 +186,9 @@ public class PlayerCharacterController : MonoBehaviour
 
             bodyRigidBody.AddTorque(up * -yAngle * yRotateAdjustFactor * Time.deltaTime);
         }
-        else
-        {
-            Debug.Log("game over");
-        }
+        //else
+        //{
+        //    Debug.Log("game over");
+        //}
     }
 }
