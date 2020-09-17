@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace Assets.Game.Scripts
 {
-    public class GameOverTrigger : MonoBehaviour
+    public class PlayerCharacterGameOverTrigger : MonoBehaviour
     {
         private void OnTriggerEnter(Collider other)
         {
