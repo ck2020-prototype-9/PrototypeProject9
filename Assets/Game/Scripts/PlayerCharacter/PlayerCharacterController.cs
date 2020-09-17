@@ -186,9 +186,9 @@ public class PlayerCharacterController : MonoBehaviour
 
             bodyRigidBody.AddTorque(up * -yAngle * yRotateAdjustFactor * Time.deltaTime);
         }
-        else
-        {
-            Debug.Log("game over");
-        }
+        //else
+        //{
+        //    Debug.Log("game over");
+        //}
     }
 }
