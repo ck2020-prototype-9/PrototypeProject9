@@ -25,6 +25,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         // 씬 리셋
         if (Keyboard.current[Key.R].wasPressedThisFrame)
         {
+            Debug.Log("스테이지 리셋");
             StageReset();
         }
     }
