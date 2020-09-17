@@ -10,6 +10,16 @@ public class FocusCameraManager : MonoBehaviour
     [SerializeField] Transform rootTransform;
     [SerializeField] float positionSmoothTime = 0.2f;
 
+    public Transform TargetTransform
+    {
+        get => targetTransform;
+        set
+        {
+            targetTransform = value;
+            rootTransform.position = targetTransform.position + offset;
+        }
+    }
+
     #region SmoothDamp
 
     private Vector3 positionSmooth;
@@ -23,6 +33,9 @@ public class FocusCameraManager : MonoBehaviour
 
     private void Update()
     {
-        rootTransform.position = Vector3.SmoothDamp(rootTransform.position, targetTransform.position + offset, ref positionSmooth, positionSmoothTime);
+        if (targetTransform != null)
+        {
+            rootTransform.position = Vector3.SmoothDamp(rootTransform.position, targetTransform.position + offset, ref positionSmooth, positionSmoothTime);
+        }
     }
 }

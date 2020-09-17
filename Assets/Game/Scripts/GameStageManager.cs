@@ -6,9 +6,13 @@ using UnityEngine.InputSystem;
 public class GameStageManager : MonoBehaviour, IStageResettable
 {
     [SerializeField] GameOverManager gameOverManager;
+    [SerializeField] PlayerCharacterManager playerCharacterManager;
+    [SerializeField] FocusCameraManager focusCameraManager;
 
     public static GameStageManager Instance { get; private set; }
-    public GameOverManager GameOverManager { get => gameOverManager; }
+    public GameOverManager GameOverManager => gameOverManager;
+    public PlayerCharacterManager PlayerCharacterManager => playerCharacterManager;
+    public FocusCameraManager FocusCameraManager => this.focusCameraManager;
 
     private void Awake()
     {
@@ -28,5 +32,6 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     public void StageReset()
     {
         GameOverManager.StageReset();
+        PlayerCharacterManager.StageReset();
     }
 }
