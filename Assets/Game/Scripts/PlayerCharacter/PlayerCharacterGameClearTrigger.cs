@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameClearTrigger : MonoBehaviour
+public class PlayerCharacterGameClearTrigger : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Goal"))
         {
             // 게임 클리어 처리
 

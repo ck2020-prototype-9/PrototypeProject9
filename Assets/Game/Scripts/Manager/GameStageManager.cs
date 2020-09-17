@@ -46,6 +46,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
                     gameClearDirecterManager.StartDirecting();
                 }
             }
+            isGameClear = value;
         }
     }
 
@@ -68,6 +69,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     public void StageReset()
     {
         IsGameOver = false;
+        IsGameClear = false;
         gameClearDirecterManager.StageReset();
         GameOverDirectorManager.StageReset();
         PlayerCharacterManager.StageReset();
