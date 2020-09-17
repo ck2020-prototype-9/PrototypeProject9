@@ -3173,6 +3173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverDirectorManager: {fileID: 285117370}
+  gameClearDirecterManager: {fileID: 1698775632}
   playerCharacterManager: {fileID: 1169213651}
   focusCameraManager: {fileID: 1389052579}
 --- !u!114 &1169213649
@@ -4317,9 +4318,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd99142abf261194aadeac6407d0c733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  directorObjectName: GameOverDirector
-  directingPrefabList: {fileID: 11400000, guid: c1eb1135ac956af48a715a6b708ec563,
-    type: 2}
+  directorObjectName: GameClearDirector
+  directingPrefabList: {fileID: 0}
 --- !u!1 &1737382607
 GameObject:
   m_ObjectHideFlags: 0
