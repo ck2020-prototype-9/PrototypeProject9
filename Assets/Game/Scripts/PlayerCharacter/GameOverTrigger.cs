@@ -7,7 +7,7 @@ namespace Assets.Game.Scripts
     {
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Terrain")
+            if (other.CompareTag("Terrain"))
             {
                 // 게임오버 처리
 
