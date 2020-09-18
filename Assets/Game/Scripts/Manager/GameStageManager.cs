@@ -10,6 +10,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     [SerializeField] DirectorManager gameClearDirecterManager;
     [SerializeField] PlayerCharacterManager playerCharacterManager;
     [SerializeField] FocusCameraManager focusCameraManager;
+    [SerializeField] GameObject payloadPrefab;
 
     public static GameStageManager Instance { get; private set; }
     public DirectorManager GameOverDirectorManager => gameOverDirectorManager;
@@ -98,5 +99,6 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         gameClearDirecterManager.StageReset();
         GameOverDirectorManager.StageReset();
         PlayerCharacterManager.StageReset();
+        Instantiate(payloadPrefab);
     }
 }

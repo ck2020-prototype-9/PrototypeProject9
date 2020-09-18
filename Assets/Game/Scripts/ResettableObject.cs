@@ -10,7 +10,7 @@ public class ResettableObject : MonoBehaviour, IStageResettable
     Quaternion initLocalRotation;
     Vector3 initLocalScale;
 
-    void Awake()
+    protected virtual void Awake()
     {
         thisTransform = transform;
         thisRigidbody = GetComponent<Rigidbody>();
@@ -20,12 +20,12 @@ public class ResettableObject : MonoBehaviour, IStageResettable
         initLocalScale = thisTransform.localScale;
     }
 
-    void Start()
+    protected virtual void Start()
     {
         GameStageManager.Instance.RegisterResettableObject(this);
     }
 
-    public void StageReset()
+    public virtual void StageReset()
     {
         thisTransform.localPosition = initLocalPosition;
         thisTransform.localRotation = initLocalRotation;
