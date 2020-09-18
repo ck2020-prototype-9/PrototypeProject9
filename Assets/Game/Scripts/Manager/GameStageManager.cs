@@ -82,15 +82,17 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         IsGameOver = false;
         IsGameClear = false;
 
-        foreach (var resettableObject in resettableObjects)
+        for (int i = 0; i < resettableObjects.Count; i++)
         {
+            ResettableObject resettableObject = resettableObjects[i];
+
             if (resettableObject != null)
             {
                 resettableObject.StageReset();
             }
             else
             {
-                resettableObjects.Remove(resettableObject);
+                resettableObjects.RemoveAt(i--);
             }
         }
         gameClearDirecterManager.StageReset();
