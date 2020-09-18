@@ -23,11 +23,14 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         get => isGameOver;
         set
         {
-            if (isGameOver == false && value == true)
+            if (!isGameClear)
             {
-                GameOverDirectorManager.StartDirecting();
+                if (isGameOver == false && value == true)
+                {
+                    GameOverDirectorManager.StartDirecting();
+                }
+                isGameOver = value;
             }
-            isGameOver = value;
         }
     }
 
@@ -45,8 +48,8 @@ public class GameStageManager : MonoBehaviour, IStageResettable
                     // 게임 클리어 연출 시작
                     gameClearDirecterManager.StartDirecting();
                 }
+                isGameClear = value;
             }
-            isGameClear = value;
         }
     }
 
