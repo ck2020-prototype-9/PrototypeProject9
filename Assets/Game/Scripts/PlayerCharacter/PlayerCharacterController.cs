@@ -89,19 +89,22 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void LegUpdate()
     {
-        // 왼쪽 다리
-        if (leftLegInput)
+        if (!(GameStageManager.Instance.IsGameOver || GameStageManager.Instance.IsGameClear))
         {
-            targetLeftLegRotation += mouseYDelta * legSpeedScale;
-        }
-        targetLeftLegRotation = Mathf.Clamp(targetLeftLegRotation, legMinAngle, legMaxAngle);
+            // 왼쪽 다리
+            if (leftLegInput)
+            {
+                targetLeftLegRotation += mouseYDelta * legSpeedScale;
+            }
+            targetLeftLegRotation = Mathf.Clamp(targetLeftLegRotation, legMinAngle, legMaxAngle);
 
-        // 오른쪽 다리
-        if (rightLegInput)
-        {
-            targetRightLegRotation += mouseYDelta * legSpeedScale;
+            // 오른쪽 다리
+            if (rightLegInput)
+            {
+                targetRightLegRotation += mouseYDelta * legSpeedScale;
+            }
+            targetRightLegRotation = Mathf.Clamp(targetRightLegRotation, legMinAngle, legMaxAngle);
         }
-        targetRightLegRotation = Mathf.Clamp(targetRightLegRotation, legMinAngle, legMaxAngle);
 
         // 왼쪽 다리 리셋
         if (targetLeftLegRotation > 0.1f)
@@ -140,7 +143,7 @@ public class PlayerCharacterController : MonoBehaviour
     {
         const float DeadZone = 0.1f;
 
-        if (!GameStageManager.Instance.IsGameOver)
+        if (!(GameStageManager.Instance.IsGameOver || GameStageManager.Instance.IsGameClear))
         {
             if (characterBalanceInput.sqrMagnitude > DeadZone * DeadZone)
             {
