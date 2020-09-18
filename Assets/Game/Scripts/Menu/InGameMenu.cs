@@ -7,8 +7,7 @@ using UnityEngine.UI;
 public class InGameMenu : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject menuSet;
-
+    [SerializeField] private GameObject menuSet;
     void Start()
     {
 
