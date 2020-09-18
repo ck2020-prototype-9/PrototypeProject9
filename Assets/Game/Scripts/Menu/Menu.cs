@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public enum ClickType
 {
+    Null,
     Start,
     Tutorial,
     Option,
@@ -15,13 +16,40 @@ public enum ClickType
     Quit,
     MouseInverse
 }
-public class MainMenu : MonoBehaviour
+
+public enum StageNumber
+{
+    Null,
+    StageBack,
+    Stage1,
+    Stage11,
+    Stage12,
+    Stage13,
+    Stage14,
+    Stage15,
+    Stage1Back,
+
+    Stage2,
+    Stage21,
+    Stage22,
+    Stage23,
+    Stage24,
+    Stage25,
+    Stage2Back
+}
+public class Menu : MonoBehaviour
 {
     public ClickType currentType;
+    public StageNumber currentStage;
 
-    public CanvasGroup mainGroup;
-    public CanvasGroup optionGroup;
-    public CanvasGroup tutorialGroup;
+    [SerializeField] private CanvasGroup mainGroup;
+    [SerializeField] private CanvasGroup optionGroup;
+    [SerializeField] private CanvasGroup tutorialGroup;
+
+    [SerializeField] private CanvasGroup stageGroup;
+    [SerializeField] private CanvasGroup stage1Group;
+    [SerializeField] private CanvasGroup stage2Group;
+
 
     [SerializeField] private Text textName;
     [SerializeField] private bool soundButtonCheck;
@@ -35,7 +63,8 @@ public class MainMenu : MonoBehaviour
         switch(currentType)
         {
             case ClickType.Start:
-                SceneManager.LoadScene("ControlTestScene");
+                CanvasGroupOn(stageGroup);
+                CanvasGroupOff(mainGroup);
                     Debug.Log("새게임");
                 break;
 
@@ -94,6 +123,81 @@ public class MainMenu : MonoBehaviour
                     GameManager.Instance.ConfigData.IsMouseYInverse = false;
                 }
                 break;
+
+            case ClickType.Null:
+                break;
+        }
+
+        switch (currentStage)
+        {
+            case StageNumber.Stage1:
+                CanvasGroupOn(stage1Group);
+                CanvasGroupOff(stageGroup);
+                break;
+            case StageNumber.Stage11:
+                SceneManager.LoadScene("ControlTestScene");
+                break;
+
+            case StageNumber.Stage12:
+
+                break;
+
+            case StageNumber.Stage13:
+
+                break;
+
+            case StageNumber.Stage14:
+
+                break;
+
+            case StageNumber.Stage15:
+
+                break;
+
+            case StageNumber.Stage2:
+                CanvasGroupOn(stage2Group);
+                CanvasGroupOff(stageGroup);
+                break;
+
+            case StageNumber.Stage21:
+
+                break;
+
+            case StageNumber.Stage22:
+
+                break;
+
+            case StageNumber.Stage23:
+
+                break;
+
+            case StageNumber.Stage24:
+
+                break;
+
+            case StageNumber.Stage25:
+
+                break;
+
+            case StageNumber.Null:
+
+                break;
+
+            case StageNumber.StageBack:
+                CanvasGroupOn(mainGroup);
+                CanvasGroupOff(stageGroup);
+                break;
+
+            case StageNumber.Stage1Back:
+                CanvasGroupOn(stageGroup);
+                CanvasGroupOff(stage1Group);
+                break;
+
+            case StageNumber.Stage2Back:
+                CanvasGroupOn(stageGroup);
+                CanvasGroupOff(stage2Group);
+                break;
+
         }
     }
     public void CanvasGroupOn(CanvasGroup canvasGroup)
