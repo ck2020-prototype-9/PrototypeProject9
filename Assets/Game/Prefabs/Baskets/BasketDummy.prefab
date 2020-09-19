@@ -240,7 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2406087301882743118}
   m_Layer: 0
-  m_Name: Basket
+  m_Name: BasketDummy
   m_TagString: Basket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -253,8 +253,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2406087301882743119}
-  m_LocalRotation: {x: 0.50019896, y: -0.49979946, z: -0.50019974, w: -0.49980167}
-  m_LocalPosition: {x: -0.13820907, y: 0.000107034, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2406087303019371454}
