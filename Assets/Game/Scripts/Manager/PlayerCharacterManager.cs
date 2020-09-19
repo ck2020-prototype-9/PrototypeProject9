@@ -7,7 +7,7 @@ public class PlayerCharacterManager : MonoBehaviour, IStageResettable
 {
     [SerializeField] GameObject characterObject;
     [SerializeField] PrefabList characterPrefabList;
-    [SerializeField] PrefabList basketPrefabList;
+    [SerializeField] GameObject basketPrefab;
 
     Vector3 characterInitialPosition;
 
@@ -77,8 +77,6 @@ public class PlayerCharacterManager : MonoBehaviour, IStageResettable
             var basketInitTransform = basketInitObject.transform;
             var basketParentTransform = basketInitTransform.parent;
 
-            // TODO: 설정된 바구니 세팅값에서 바구니를 불러오록 수정해야함.
-            var basketPrefab = basketPrefabList[0];
             Debug.Log($"바구니 프리팹 : {basketPrefab}");
             var basketObject = Instantiate(basketPrefab);
 

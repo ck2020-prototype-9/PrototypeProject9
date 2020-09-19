@@ -8090,7 +8090,8 @@ MonoBehaviour:
   characterObject: {fileID: 8414270717827158421}
   characterPrefabList: {fileID: 11400000, guid: 3069eaf09c65f1c42a1b1eb0a6edb1d5,
     type: 2}
-  basketPrefabList: {fileID: 11400000, guid: be95b4308a8f9f04a93720403ac67b8c, type: 2}
+  basketPrefab: {fileID: 2406087301882743119, guid: 156987fc70f43f74eac280c1efe88a33,
+    type: 3}
 --- !u!1 &1193841719
 GameObject:
   m_ObjectHideFlags: 0
