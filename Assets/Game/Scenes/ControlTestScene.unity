@@ -8088,7 +8088,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterObject: {fileID: 8414270717827158421}
-  presetList: {fileID: 11400000, guid: cc15779880ca3884e81ce1aad8ac2e92, type: 2}
+  characterPrefabList: {fileID: 11400000, guid: 3069eaf09c65f1c42a1b1eb0a6edb1d5,
+    type: 2}
+  basketPrefabList: {fileID: 11400000, guid: be95b4308a8f9f04a93720403ac67b8c, type: 2}
 --- !u!1 &1193841719
 GameObject:
   m_ObjectHideFlags: 0

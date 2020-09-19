@@ -13,11 +13,11 @@ public class DirectorManager : MonoBehaviour, IStageResettable
     public void StartDirecting()
     {
         Debug.Log($"{directorObjectName} 연출 시작");
-        if (directingPrefabList.prefabs != null && directingPrefabList.prefabs.Length > 0)
+        if (directingPrefabList != null && directingPrefabList.Length > 0)
         {
-            var index = Random.Range(0, directingPrefabList.prefabs.Length);
+            var index = Random.Range(0, directingPrefabList.Length);
 
-            var gameOverDirectorPrefab = directingPrefabList.prefabs[index];
+            var gameOverDirectorPrefab = directingPrefabList[index];
 
             // 디렉팅 시작 (자동 시작)
             gameOverDirectorObject = Instantiate(gameOverDirectorPrefab);
@@ -25,7 +25,7 @@ public class DirectorManager : MonoBehaviour, IStageResettable
         }
         else
         {
-            Debug.LogWarning($"{nameof(directingPrefabList.prefabs)}에 값이 할당되지 않았습니다.");
+            Debug.LogWarning($"{nameof(directingPrefabList)}에 값이 할당되지 않았습니다.");
         }
     }
 

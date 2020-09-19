@@ -2,9 +2,8 @@
 using UnityEngine;
 
 [Serializable]
-public class CharacterPresetData
+class PrefabListData
 {
     public string key;
-    public string name;
     public GameObject prefab;
 }

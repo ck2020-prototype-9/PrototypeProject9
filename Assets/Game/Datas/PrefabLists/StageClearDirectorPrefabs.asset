@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7843e65b9b2dc5e40a8e4a7fde382a3b, type: 3}
   m_Name: StageClearDirectorPrefabs
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6118401820339642711, guid: a30e2f277a52fc042a372364cee9996d, type: 3}
+  prefabDatas:
+  - key: dummy
+    prefab: {fileID: 6118401820339642711, guid: a30e2f277a52fc042a372364cee9996d,
+      type: 3}
