@@ -8,16 +8,14 @@ public class InGameMenu : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private GameObject menuSet;
-    void Start()
+    [SerializeField] private GameObject restartObject;
+    [SerializeField] private GameObject optionMenu;
+    [SerializeField] private GameObject menu;
+    [SerializeField] GameObject pause;
+
+    void Awake()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-      
-
+        
     }
 
     public void OnClickExit()
@@ -27,6 +25,32 @@ public class InGameMenu : MonoBehaviour
 
     public void OnClickContinue()
     {
+        pause.GetComponent<GameStageManager>().PauseCheck = true;
         menuSet.SetActive(false);
+        restartObject.SetActive(true);  
+    }
+    public void OnClickOption()
+    {
+        optionMenu.SetActive(true);
+        menu.SetActive(false);
+
+    }
+
+    public void OnClickBack()
+    {
+        optionMenu.SetActive(false);
+        menu.SetActive(true);
+    }
+    public void CanvasGroupOn(CanvasGroup canvasGroup)
+    {
+        canvasGroup.alpha = 1;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
+    }
+    public void CanvasGroupOff(CanvasGroup canvasGroup)
+    {
+        canvasGroup.alpha = 0;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
     }
 }
