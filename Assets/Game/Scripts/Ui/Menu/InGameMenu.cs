@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,10 +13,12 @@ public class InGameMenu : MonoBehaviour
     [SerializeField] private GameObject optionMenu;
     [SerializeField] private GameObject menu;
     [SerializeField] GameObject pause;
+    [SerializeField] TutorialManager tutorialCheck;
+   // [SerializeField] GameStageManager stageReset;
 
     void Awake()
     {
-        
+       
     }
 
     public void OnClickExit()
@@ -53,4 +56,22 @@ public class InGameMenu : MonoBehaviour
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;
     }
+
+    public void OnTutorialBack()
+    {
+       // stageReset.GetComponent<GameStageManager>().StageReset();
+        tutorialCheck.tutorialCheck = false;
+        tutorialCheck.currentCheckTime = tutorialCheck.checkTime;
+        if (tutorialCheck.count>0)
+            tutorialCheck.count -= 1;
+    }
+    public void OnTutorialNext()
+    {
+        //stageReset.GetComponent<GameStageManager>().StageReset();
+       tutorialCheck.tutorialCheck = false;
+       tutorialCheck.currentCheckTime = tutorialCheck.checkTime;
+        if (tutorialCheck.count < 5)
+            tutorialCheck.count += 1;
+    }
+
 }

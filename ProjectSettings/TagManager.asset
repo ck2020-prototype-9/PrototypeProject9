@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Terrain
   - Goal
+  - Tutorial
   layers:
   - Default
   - TransparentFX

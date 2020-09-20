@@ -29,9 +29,10 @@ public class GameStageManager : MonoBehaviour, IStageResettable
 
     private float restartTime = 3.99f;
     private float currentRestartTime;
-   [SerializeField] private int test1;
+
+    
+
     public bool PauseCheck { set { isPauseCheck = value; } get { return isPauseCheck; } }
-    public int test { set { test1 = value; } get { return test1; } }
     public bool IsGameOver
     {
         get => isGameOver;
@@ -148,6 +149,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
                 isPause = false;
                 menuSet.SetActive(false);
                 currentRestartTime = restartTime;
+                StageReset();
             }
         }
     }
