@@ -48,6 +48,7 @@ public class PlayerCharacterManager : MonoBehaviour, IStageResettable
 
     private void Start()
     {
+        CharacterObject = CharacterObject;
         characterInitialPosition = CharacterObject.transform.position;
 
         StageReset();
