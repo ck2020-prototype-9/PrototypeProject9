@@ -74,7 +74,7 @@ public class PlayerCharacterManager : MonoBehaviour, IStageResettable
             GameStageManager.Instance.FocusCameraManager.TargetTransform = CharacterObject.transform;
 
             // 바구니 설정
-            var basketInitObject = GameObject.FindGameObjectWithTag("Basket");
+            var basketInitObject = GameObject.FindGameObjectWithTag("BasketObject");
             var basketInitTransform = basketInitObject.transform;
             var basketParentTransform = basketInitTransform.parent;
 

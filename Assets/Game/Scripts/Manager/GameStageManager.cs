@@ -13,6 +13,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     [SerializeField] PlayerCharacterManager playerCharacterManager;
     [SerializeField] FocusCameraManager focusCameraManager;
     [SerializeField] TutorialManager tutorialManager;
+    [SerializeField] GameObject payloadObject;
     [SerializeField] GameObject payloadPrefab;
 
     public static GameStageManager Instance { get; private set; }
@@ -22,6 +23,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
 
     List<ResettableObject> resettableObjects = new List<ResettableObject>();
 
+    Vector3 payloadInitPosition;
     bool isGameOver = false;
     bool isGameClear = false;
 
@@ -79,6 +81,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         currentRestartTime = restartTime;
         timeBox.text = currentRestartTime.ToString();
 
+        payloadInitPosition = payloadObject.transform.position;
     }
 
     private void Update()
@@ -144,7 +147,8 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         gameClearDirecterManager.StageReset();
         GameOverDirectorManager.StageReset();
         PlayerCharacterManager.StageReset();
-        Instantiate(payloadPrefab);
+        payloadObject = Instantiate(payloadPrefab);
+        payloadObject.transform.position = payloadInitPosition;
     }
 
     public void IsPause()

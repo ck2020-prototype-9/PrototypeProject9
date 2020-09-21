@@ -9,6 +9,7 @@ TagManager:
   - Basket
   - Tutorial
   - Payload
+  - BasketObject
   layers:
   - Default
   - TransparentFX

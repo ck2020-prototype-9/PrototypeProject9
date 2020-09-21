@@ -1040,6 +1040,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359778552}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &360543554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5265890294865257383, guid: a35be45724cb37146865e36ba5f7b69f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5265890294311757589}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &382979392 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2685232303607029716, guid: d3ba7f5cbb06fff448b3af0275001b94,
@@ -8380,6 +8386,7 @@ MonoBehaviour:
   playerCharacterManager: {fileID: 1169213651}
   focusCameraManager: {fileID: 1389052579}
   tutorialManager: {fileID: 712990242}
+  payloadObject: {fileID: 360543554}
   payloadPrefab: {fileID: 5265890294865257383, guid: a35be45724cb37146865e36ba5f7b69f,
     type: 3}
   menuSet: {fileID: 382979392}
@@ -11036,7 +11043,7 @@ PrefabInstance:
     - target: {fileID: 5265890294865257382, guid: a35be45724cb37146865e36ba5f7b69f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.44
+      value: 2.379
       objectReference: {fileID: 0}
     - target: {fileID: 5265890294865257382, guid: a35be45724cb37146865e36ba5f7b69f,
         type: 3}
