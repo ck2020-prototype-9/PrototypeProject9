@@ -9,7 +9,7 @@ using UnityEngine.Events;
 [Serializable]
 public class BackgroundCharacterControllerEvent : UnityEvent<BackgroundCharacterController> { }
 
-public class BackgroundCharacterController : MonoBehaviour
+public class BackgroundCharacterController : ResettableObject
 {
     [SerializeField] NavMeshAgent navMeshAgent;
     [Tooltip("")]
@@ -43,8 +43,16 @@ public class BackgroundCharacterController : MonoBehaviour
         this.waypoints = waypoints;
     }
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+        Initalize();
+    }
+
+    private void Initalize()
+    {
+        waypointsStep = 0;
+        navMeshAgent.velocity = Vector3.zero;
         this.transform.position = waypoints[0].position;
         GotoNextPoint();
     }
@@ -63,7 +71,7 @@ public class BackgroundCharacterController : MonoBehaviour
             for (int i = 0; i < waypoints.Length; i++)
             {
                 int j = (i + 1) % waypoints.Length;
-                
+
                 if (j != 0 || isLoop)
                 {
                     Handles.color = Color.green;
@@ -99,12 +107,17 @@ public class BackgroundCharacterController : MonoBehaviour
         else if (waypointsStep < waypoints.Length)
         {
             waypointsStep += 1;
-            navMeshAgent.autoBraking = false;
-        }
-        else
-        {
-            navMeshAgent.autoBraking = true;
+            if (waypointsStep >= waypoints.Length)
+                navMeshAgent.autoBraking = true;
+            else
+                navMeshAgent.autoBraking = false;
         }
         return waypointsStep;
+    }
+
+    public override void StageReset()
+    {
+        base.StageReset();
+        Initalize();
     }
 }
