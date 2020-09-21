@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class InGameMenu : MonoBehaviour
 {
+    public GameObject save;
     // Start is called before the first frame update
     [SerializeField] private GameObject menuSet;
     [SerializeField] private GameObject restartObject;
@@ -73,5 +74,19 @@ public class InGameMenu : MonoBehaviour
         if (tutorialCheck.count < 5)
             tutorialCheck.count += 1;
     }
+    
+    public void OnClickSave()
+    {
+        save.GetComponent<UiManager>().SoundSave();
+    }
 
+    public void OnClickESC()
+    {
+        if(pause.GetComponent<GameStageManager>().Pause == false)
+        {
+            pause.GetComponent<GameStageManager>().Pause = true;
+            menu.SetActive(true);
+            menuSet.SetActive(true);
+        }
+    }
 }

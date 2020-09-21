@@ -54,7 +54,7 @@ public class TutorialManager : MonoBehaviour
                             {
                                 Debug.Log("성공!");
                                 tutorialCheck = true;
-                            //    checkBox.SetActive(true);
+                                 //checkBox.SetActive(true);
                                 //  StageRe();
                             }
                         }
@@ -65,7 +65,6 @@ public class TutorialManager : MonoBehaviour
                         //checkBox.SetActive(true);
                     }
                 }
-                
                 break;
 
             case 2:
@@ -155,6 +154,7 @@ public class TutorialManager : MonoBehaviour
             case 5:
                 // checkBox.SetActive(false);
                 rightBox.SetActive(false);
+                leftBox.SetActive(false);
                 text.text = "당신은 조작키를 마스터했습니다.\n이제 앞으로 전진할 일만 남았군요!\n도착지점까지 가봅시다.";
                 if (Mouse.current.rightButton.isPressed || Mouse.current.leftButton.isPressed)
                 {

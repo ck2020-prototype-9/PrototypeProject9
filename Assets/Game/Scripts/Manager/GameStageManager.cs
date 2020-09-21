@@ -33,6 +33,8 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     
 
     public bool PauseCheck { set { isPauseCheck = value; } get { return isPauseCheck; } }
+
+    public bool Pause { set { isPause = value; } get { return isPause; } }
     public bool IsGameOver
     {
         get => isGameOver;
