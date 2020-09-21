@@ -135,7 +135,7 @@ public class Menu : MonoBehaviour
                 CanvasGroupOff(stageGroup);
                 break;
             case StageNumber.Stage11:
-                SceneManager.LoadScene("ControlTestScene");
+                SceneManager.LoadScene("DummyTestScene");
                 break;
 
             case StageNumber.Stage12:
