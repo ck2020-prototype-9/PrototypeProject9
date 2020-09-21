@@ -45,7 +45,8 @@ public class BackgroundCharacterController : MonoBehaviour
 
     private void Start()
     {
-        GotoCurrentPoint();
+        this.transform.position = waypoints[0].position;
+        GotoNextPoint();
     }
 
     private void Update()
@@ -56,6 +57,7 @@ public class BackgroundCharacterController : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        this.transform.position = waypoints[0].position;
         if (isShowWaypointLine)
         {
             for (int i = 0; i < waypoints.Length; i++)
