@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 53142004d5e9bc043ab698635372f7ea, type: 3}
-  m_Name: CharacterPresetList
+  m_Script: {fileID: 11500000, guid: 7843e65b9b2dc5e40a8e4a7fde382a3b, type: 3}
+  m_Name: StageClearDirectorPrefabs
   m_EditorClassIdentifier: 
-  characterPreset:
+  prefabDatas:
   - key: dummy
-    name: DummyCharacter
-    prefab: {fileID: 1351914643527133008, guid: bf01d972faa5fd74188b2391d44f38d2,
+    prefab: {fileID: 6118401820339642711, guid: a30e2f277a52fc042a372364cee9996d,
       type: 3}

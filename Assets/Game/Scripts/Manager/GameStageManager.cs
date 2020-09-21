@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
@@ -10,11 +12,14 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     [SerializeField] DirectorManager gameClearDirecterManager;
     [SerializeField] PlayerCharacterManager playerCharacterManager;
     [SerializeField] FocusCameraManager focusCameraManager;
+    [SerializeField] GameObject payloadPrefab;
 
     public static GameStageManager Instance { get; private set; }
     public DirectorManager GameOverDirectorManager => gameOverDirectorManager;
     public PlayerCharacterManager PlayerCharacterManager => playerCharacterManager;
     public FocusCameraManager FocusCameraManager => this.focusCameraManager;
+
+    List<ResettableObject> resettableObjects = new List<ResettableObject>();
 
     bool isGameOver = false;
     bool isGameClear = false;
@@ -46,8 +51,8 @@ public class GameStageManager : MonoBehaviour, IStageResettable
                 {
                     GameOverDirectorManager.StartDirecting();
                 }
-                isGameOver = value;
             }
+            isGameOver = value;
         }
     }
 
@@ -58,15 +63,15 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         {
             if (!isGameOver)
             {
-                if (isGameClear==false && value == true)
+                if (isGameClear == false && value == true)
                 {
                     // TODO: 게임 클리어시 클리어 데이터 저장 구현 해야함
 
                     // 게임 클리어 연출 시작
                     gameClearDirecterManager.StartDirecting();
                 }
-                isGameClear = value;
             }
+            isGameClear = value;
         }
     }
 
@@ -117,13 +122,33 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         ReStart();
     }
 
+    public void RegisterResettableObject(ResettableObject resettableObject)
+    {
+        resettableObjects.Add(resettableObject);
+    }
+
     public void StageReset()
     {
         IsGameOver = false;
         IsGameClear = false;
+
+        for (int i = 0; i < resettableObjects.Count; i++)
+        {
+            ResettableObject resettableObject = resettableObjects[i];
+
+            if (resettableObject != null)
+            {
+                resettableObject.StageReset();
+            }
+            else
+            {
+                resettableObjects.RemoveAt(i--);
+            }
+        }
         gameClearDirecterManager.StageReset();
         GameOverDirectorManager.StageReset();
         PlayerCharacterManager.StageReset();
+        Instantiate(payloadPrefab);
     }
 
     public void IsPause()

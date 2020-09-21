@@ -6,7 +6,8 @@ using UnityEngine.InputSystem;
 public class PlayerCharacterManager : MonoBehaviour, IStageResettable
 {
     [SerializeField] GameObject characterObject;
-    [SerializeField] CharacterPresetList presetList;
+    [SerializeField] PrefabList characterPrefabList;
+    [SerializeField] GameObject basketPrefab;
 
     Vector3 characterInitialPosition;
 
@@ -62,10 +63,28 @@ public class PlayerCharacterManager : MonoBehaviour, IStageResettable
         IEnumerator CharacterLoadCoroutine()
         {
             yield return null;
-            // TODO: 저장된 캐릭터 세팅값에서 캐릭터를 불러오록 수정해야함
-            CharacterObject = Instantiate(presetList.characterPreset[0].prefab);
+            Debug.Log("  캐릭터 초기화");
+
+            // TODO: 저장된 캐릭터 프리셋에서 캐릭터를 불러오록 수정해야함
+            var characterPrefab = characterPrefabList[0];
+            Debug.Log($"캐릭터 프리팹 : {characterPrefab}");
+            CharacterObject = Instantiate(characterPrefab);
             CharacterObject.transform.position = characterInitialPosition;
             GameStageManager.Instance.FocusCameraManager.TargetTransform = CharacterObject.transform;
+
+            // 바구니 설정
+            var basketInitObject = GameObject.FindGameObjectWithTag("Basket");
+            var basketInitTransform = basketInitObject.transform;
+            var basketParentTransform = basketInitTransform.parent;
+
+            Debug.Log($"바구니 프리팹 : {basketPrefab}");
+            var basketObject = Instantiate(basketPrefab);
+
+            basketObject.transform.parent = basketParentTransform;
+            basketObject.transform.localPosition = basketInitTransform.localPosition;
+            basketObject.transform.localRotation = basketInitTransform.localRotation;
+
+            Destroy(basketInitObject);
         }
     }
 }

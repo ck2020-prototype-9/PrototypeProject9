@@ -10,7 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7843e65b9b2dc5e40a8e4a7fde382a3b, type: 3}
-  m_Name: StageClearDirectorPrefabs
+  m_Name: GameOverDirectorPrefabs
   m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 6118401820339642711, guid: a30e2f277a52fc042a372364cee9996d, type: 3}
+  prefabDatas:
+  - key: dummy
+    prefab: {fileID: 2002964024375879864, guid: 3f40c8078c4d40a48adf1fd661e3100f,
+      type: 3}
