@@ -46,7 +46,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         {
             if (!isGameClear && isGameOver == false && value == true)
             {
-                if (!tutorialManager.enabled)
+                if (tutorialManager == null || !tutorialManager.gameObject.activeSelf)
                 {
                     GameOverDirectorManager.StartDirecting();
                 }
