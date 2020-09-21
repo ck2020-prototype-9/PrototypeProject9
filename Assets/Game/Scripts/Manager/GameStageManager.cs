@@ -12,6 +12,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     [SerializeField] DirectorManager gameClearDirecterManager;
     [SerializeField] PlayerCharacterManager playerCharacterManager;
     [SerializeField] FocusCameraManager focusCameraManager;
+    [SerializeField] TutorialManager tutorialManager;
     [SerializeField] GameObject payloadPrefab;
 
     public static GameStageManager Instance { get; private set; }
@@ -29,13 +30,13 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     [SerializeField] private GameObject menu;
     [SerializeField] private GameObject Option;
     [SerializeField] private Text timeBox;
-    [SerializeField]bool isPause = false;
-    [SerializeField]bool isPauseCheck = false;
+    [SerializeField] bool isPause = false;
+    [SerializeField] bool isPauseCheck = false;
 
     private float restartTime = 3.99f;
     private float currentRestartTime;
 
-    
+
 
     public bool PauseCheck { set { isPauseCheck = value; } get { return isPauseCheck; } }
     public bool IsGameOver
@@ -43,9 +44,9 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         get => isGameOver;
         set
         {
-            if (!isGameClear)
+            if (!isGameClear && isGameOver == false && value == true)
             {
-                if (isGameOver == false && value == true)
+                if (!tutorialManager.enabled)
                 {
                     GameOverDirectorManager.StartDirecting();
                 }
@@ -59,15 +60,12 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         get => isGameClear;
         set
         {
-            if (!isGameOver)
+            if (!isGameOver && isGameClear == false && value == true)
             {
-                if (isGameClear == false && value == true)
-                {
-                    // TODO: 게임 클리어시 클리어 데이터 저장 구현 해야함
+                // TODO: 게임 클리어시 클리어 데이터 저장 구현 해야함
 
-                    // 게임 클리어 연출 시작
-                    gameClearDirecterManager.StartDirecting();
-                }
+                // 게임 클리어 연출 시작
+                gameClearDirecterManager.StartDirecting();
             }
             isGameClear = value;
         }
@@ -107,7 +105,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
                 isPauseCheck = true;
 
             }
-            else if(!isPauseCheck)
+            else if (!isPauseCheck)
             {
                 menuSet.SetActive(true);
                 menu.SetActive(true);
@@ -162,7 +160,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         }
     }
 
-    public void ReStart() 
+    public void ReStart()
     {
         //일시정지가 풀리기 전 3초 지연시간
         if (isPauseCheck && isPause)
