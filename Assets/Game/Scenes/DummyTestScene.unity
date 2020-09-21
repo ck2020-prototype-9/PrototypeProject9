@@ -117,10 +117,10 @@ NavMeshSettings:
     cellSize: 0.16666667
     manualTileSize: 0
     tileSize: 256
-    accuratePlacement: 0
+    accuratePlacement: 1
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: edc36c0d55918944995015a6dd83ba5e, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 05418297a7bdfc448b11ef72fe16f9ef, type: 2}
 --- !u!1 &20952885
 GameObject:
   m_ObjectHideFlags: 0
@@ -8278,7 +8278,7 @@ Transform:
   - {fileID: 285117369}
   - {fileID: 1698775631}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1169213648
 MonoBehaviour:
@@ -9329,7 +9329,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: cb7d3ae03fbeb6344b4eb109f65d604f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: cb7d3ae03fbeb6344b4eb109f65d604f,
         type: 3}
@@ -10353,7 +10353,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 0a1918fac15d6164a846ccc09416a414,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0a1918fac15d6164a846ccc09416a414,
         type: 3}
@@ -10721,7 +10721,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 360
@@ -10867,7 +10867,7 @@ PrefabInstance:
     - target: {fileID: 1840045456624008682, guid: bf01d972faa5fd74188b2391d44f38d2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1840045456624008682, guid: bf01d972faa5fd74188b2391d44f38d2,
         type: 3}

@@ -63,8 +63,10 @@ public class BackgroundCharacterController : ResettableObject
             GotoNextPoint();
     }
 
+#if UNITY_EDITOR
     private void OnDrawGizmos()
     {
+        if (!Application.IsPlaying(this))
         this.transform.position = waypoints[0].position;
         if (isShowWaypointLine)
         {
@@ -82,6 +84,7 @@ public class BackgroundCharacterController : ResettableObject
             }
         }
     }
+#endif
 
     private void GotoNextPoint()
     {
