@@ -43,7 +43,8 @@ public class Menu : MonoBehaviour
     public StageNumber currentStage;
 
     [SerializeField] private CanvasGroup mainGroup;
-    [SerializeField] private CanvasGroup optionGroup;
+    [SerializeField] private GameObject optionGroup;
+    [SerializeField] private GameObject menu;
     [SerializeField] private CanvasGroup tutorialGroup;
 
     [SerializeField] private CanvasGroup stageGroup;
@@ -75,8 +76,8 @@ public class Menu : MonoBehaviour
                 break;
 
             case ClickType.Option:
-                Debug.Log("옵션설정");
-                CanvasGroupOn(optionGroup);
+                Debug.Log("옵션설정");   
+                optionGroup.SetActive(true);
                 CanvasGroupOff(mainGroup);
                 break;
 
@@ -98,8 +99,9 @@ public class Menu : MonoBehaviour
             case ClickType.OptionBack:
                 Debug.Log("뒤로가기");
                 GameManager.Instance.ConfigSave();
+                menu.SetActive(true);
                 CanvasGroupOn(mainGroup);
-                CanvasGroupOff(optionGroup);
+                optionGroup.SetActive(false);
                 break;
 
             case ClickType.TutorialBack:
