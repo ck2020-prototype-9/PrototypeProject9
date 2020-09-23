@@ -147,6 +147,8 @@ MonoBehaviour:
     m_Bits: 4294967295
   offset: {x: 0, y: 0.01, z: 0}
   scale: {x: 0.5, y: 0.5, z: 0.5}
+  volumeScalePerVelocity: 0.25
+  maxVolumeScale: 1
 --- !u!82 &5594146724807596702
 AudioSource:
   m_ObjectHideFlags: 0

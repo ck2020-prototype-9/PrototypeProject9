@@ -10,6 +10,9 @@ public class CollisionEffect : MonoBehaviour
     [SerializeField] Vector3 offset = new Vector3(0, 0.01f, 0);
     [SerializeField] Vector3 scale = new Vector3(1, 1, 1);
 
+    [SerializeField] float volumeScalePerVelocity = 0.5f;
+    [SerializeField] float maxVolumeScale = 2f;
+
     private void OnCollisionEnter(Collision collision)
     {
         if ((collision.gameObject.layer & targetLayer) != 0)
@@ -21,7 +24,7 @@ public class CollisionEffect : MonoBehaviour
                 effectTransform.position = contact.point + offset;
                 var effectScale = effectTransform.localScale;
                 effectTransform.localScale = new Vector3(effectScale.x * scale.x, effectScale.y * scale.y, effectScale.z * scale.z);
-                audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)]);
+                audioSource.PlayOneShot(audioClips[Random.Range(0, audioClips.Length)], Mathf.Min(collision.relativeVelocity.magnitude * volumeScalePerVelocity, maxVolumeScale));
                 break;
             }
         }
