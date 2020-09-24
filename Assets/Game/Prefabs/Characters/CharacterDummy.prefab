@@ -161,10 +161,12 @@ MonoBehaviour:
     m_Bits: 4294967295
   offset: {x: 0, y: 0.03, z: 0}
   scale: {x: 1, y: 1, z: 1}
-  scalePerVelocity: 0.5
+  leastImpulse: 0
+  scalePerImpulse: 0.5
   maxScale: 10
-  volumeScalePerVelocity: 0.5
+  volumeScalePerImpulse: 0.5
   maxVolumeScale: 10
+  lastImpulse: 0
 --- !u!82 &6807194798894952856
 AudioSource:
   m_ObjectHideFlags: 0
@@ -507,6 +509,7 @@ GameObject:
   - component: {fileID: 4795115135967695494}
   - component: {fileID: 4795115135967695495}
   - component: {fileID: 4795115135967695488}
+  - component: {fileID: 4882031366566078470}
   m_Layer: 0
   m_Name: Bip001 R Thigh
   m_TagString: Untagged
@@ -593,6 +596,33 @@ CapsuleCollider:
   m_Height: 0.7
   m_Direction: 0
   m_Center: {x: -0.41, y: 0, z: -0.0125}
+--- !u!114 &4882031366566078470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4795115135967695492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277e146fd14369d41b80e6f9da8b99e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 2145728708693300434, guid: eadf021fd0ce71d4e8327b13dd79942f, type: 3}
+  audioSource: {fileID: 6807194798894952856}
+  audioClips:
+  - {fileID: 8300000, guid: d765c56dfaf06da42b10dc6487a8a49c, type: 3}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  offset: {x: 0, y: 0.03, z: 0}
+  scale: {x: 1, y: 1, z: 1}
+  leastImpulse: 1
+  scalePerImpulse: 0.5
+  maxScale: 10
+  volumeScalePerImpulse: 0.5
+  maxVolumeScale: 10
+  lastImpulse: 0
 --- !u!1 &5176851871000052429
 GameObject:
   m_ObjectHideFlags: 0
@@ -666,6 +696,7 @@ GameObject:
   - component: {fileID: 5405881869973580834}
   - component: {fileID: 5405881869973580835}
   - component: {fileID: 5405881869973580844}
+  - component: {fileID: 3899383847351587058}
   m_Layer: 0
   m_Name: Bip001 L Thigh
   m_TagString: Untagged
@@ -752,6 +783,33 @@ CapsuleCollider:
   m_Height: 0.7
   m_Direction: 0
   m_Center: {x: -0.41, y: 0, z: 0.0125}
+--- !u!114 &3899383847351587058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5405881869973580832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277e146fd14369d41b80e6f9da8b99e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 2145728708693300434, guid: eadf021fd0ce71d4e8327b13dd79942f, type: 3}
+  audioSource: {fileID: 6807194798894952856}
+  audioClips:
+  - {fileID: 8300000, guid: d765c56dfaf06da42b10dc6487a8a49c, type: 3}
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  offset: {x: 0, y: 0.03, z: 0}
+  scale: {x: 1, y: 1, z: 1}
+  leastImpulse: 1
+  scalePerImpulse: 0.5
+  maxScale: 10
+  volumeScalePerImpulse: 0.5
+  maxVolumeScale: 10
+  lastImpulse: 0
 --- !u!1 &5560882849188909598
 GameObject:
   m_ObjectHideFlags: 0
