@@ -623,7 +623,7 @@ MonoBehaviour:
   scalePerImpulse: 0.5
   maxScale: 10
   volumeScalePerImpulse: 0.5
-  maxVolumeScale: 10
+  maxVolumeScale: 2
   minPitch: 0.8
   maxPitch: 1.2
   lastImpulse: 0
@@ -812,7 +812,7 @@ MonoBehaviour:
   scalePerImpulse: 0.5
   maxScale: 10
   volumeScalePerImpulse: 0.5
-  maxVolumeScale: 10
+  maxVolumeScale: 2
   minPitch: 0.8
   maxPitch: 1.2
   lastImpulse: 0
