@@ -159,10 +159,12 @@ MonoBehaviour:
   targetLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  offset: {x: 0, y: 0.01, z: 0}
+  offset: {x: 0, y: 0.03, z: 0}
   scale: {x: 1, y: 1, z: 1}
+  scalePerVelocity: 0.5
+  maxScale: 10
   volumeScalePerVelocity: 0.5
-  maxVolumeScalePerVelocity: 1
+  maxVolumeScale: 10
 --- !u!82 &6807194798894952856
 AudioSource:
   m_ObjectHideFlags: 0
