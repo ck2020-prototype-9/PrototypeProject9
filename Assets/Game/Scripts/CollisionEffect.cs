@@ -15,6 +15,8 @@ public class CollisionEffect : MonoBehaviour
     [SerializeField] float maxScale = 2f;
     [SerializeField] float volumeScalePerImpulse = 0.5f;
     [SerializeField] float maxVolumeScale = 2f;
+    [SerializeField] float minPitch = 1f;
+    [SerializeField] float maxPitch = 1f;
 
     [Header("Debug")]
     [SerializeField] float lastImpulse;
@@ -39,6 +41,7 @@ public class CollisionEffect : MonoBehaviour
 
                     effectTransform.localScale = Vector3.Scale(effectScale, scale) * Mathf.Min(impulse * scalePerImpulse, maxScale);
 
+                    audioSource.pitch = Random.Range(minPitch, maxPitch);
                     audioSource.PlayOneShot(
                         audioClips[Random.Range(0, audioClips.Length)],
                         Mathf.Min(

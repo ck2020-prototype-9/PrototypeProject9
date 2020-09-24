@@ -166,6 +166,8 @@ MonoBehaviour:
   maxScale: 10
   volumeScalePerImpulse: 0.5
   maxVolumeScale: 10
+  minPitch: 0.8
+  maxPitch: 1.2
   lastImpulse: 0
 --- !u!82 &6807194798894952856
 AudioSource:
@@ -617,11 +619,13 @@ MonoBehaviour:
     m_Bits: 4294967295
   offset: {x: 0, y: 0.03, z: 0}
   scale: {x: 1, y: 1, z: 1}
-  leastImpulse: 1
+  leastImpulse: 0.5
   scalePerImpulse: 0.5
   maxScale: 10
   volumeScalePerImpulse: 0.5
   maxVolumeScale: 10
+  minPitch: 0.8
+  maxPitch: 1.2
   lastImpulse: 0
 --- !u!1 &5176851871000052429
 GameObject:
@@ -804,11 +808,13 @@ MonoBehaviour:
     m_Bits: 4294967295
   offset: {x: 0, y: 0.03, z: 0}
   scale: {x: 1, y: 1, z: 1}
-  leastImpulse: 1
+  leastImpulse: 0.5
   scalePerImpulse: 0.5
   maxScale: 10
   volumeScalePerImpulse: 0.5
   maxVolumeScale: 10
+  minPitch: 0.8
+  maxPitch: 1.2
   lastImpulse: 0
 --- !u!1 &5560882849188909598
 GameObject:
