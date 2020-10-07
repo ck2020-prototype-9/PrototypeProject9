@@ -14,12 +14,14 @@ public class InGameMenu : MonoBehaviour
     [SerializeField] private GameObject optionMenu;
     [SerializeField] private GameObject menu;
     [SerializeField] GameObject pause;
+    [SerializeField] GameObject option;
     [SerializeField] TutorialManager tutorialCheck;
+    [SerializeField] GameObject optionButtomNormal;
    // [SerializeField] GameStageManager stageReset;
 
     void Awake()
     {
-       
+        
     }
 
     public void OnClickExit()
@@ -30,20 +32,30 @@ public class InGameMenu : MonoBehaviour
     public void OnClickContinue()
     {
         pause.GetComponent<GameStageManager>().PauseCheck = true;
-        menuSet.SetActive(false);
-        restartObject.SetActive(true);  
+
+        //menuSet.SetActive(false);
+        //restartObject.SetActive(true);  
     }
     public void OnClickOption()
     {
         optionMenu.SetActive(true);
         menu.SetActive(false);
+        optionButtomNormal.SetActive(false);
+        if (optionMenu.activeSelf==true)
+        {
+            option.GetComponent<GameStageManager>().OptionChcek = true;
+        }
+           
+      
 
     }
 
     public void OnClickBack()
     {
+        option.GetComponent<GameStageManager>().OptionChcek = false;
         optionMenu.SetActive(false);
         menu.SetActive(true);
+        
     }
     public void CanvasGroupOn(CanvasGroup canvasGroup)
     {
