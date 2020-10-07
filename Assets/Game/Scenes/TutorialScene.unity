@@ -10606,7 +10606,7 @@ MonoBehaviour:
   characterObject: {fileID: 8414270717827158421}
   characterPrefabList: {fileID: 11400000, guid: 3069eaf09c65f1c42a1b1eb0a6edb1d5,
     type: 2}
-  basketPrefab: {fileID: 1996890764353685405, guid: 90f27c609d851284886bb12339234bc1,
+  basketPrefab: {fileID: 1996890764353685405, guid: 1619dafefa0e3a34ca5b7a653baa6a8c,
     type: 3}
 --- !u!1 &1193206000
 GameObject:
