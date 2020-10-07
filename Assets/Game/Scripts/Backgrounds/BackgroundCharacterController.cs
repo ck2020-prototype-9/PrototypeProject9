@@ -21,19 +21,32 @@ public class BackgroundCharacterController : ResettableObject
 
     private int waypointsStep = 0;
 
+    enum ArriveStates
+    {
+        None = 0,
+        Arrived = 1,
+        ArrivedAndEventInvoked = 2
+    }
+    private ArriveStates arriveState; // 1 = arrived, 2 = arrivedEventInvoked
+
     public NavMeshAgent NavMeshAgent => navMeshAgent;
+
     public bool IsLoop
     {
         get => isLoop;
         set
         {
             isLoop = value;
+            arriveState = 0;
             if (waypointsStep >= waypoints.Length)
             {
                 waypointsStep = 0;
             }
         }
     }
+
+    public bool IsArrived => 0 < arriveState;
+
     public BackgroundCharacterControllerEvent ArriveEvent => arriveEvent;
 
     public Transform[] GetWaypoints() => waypoints;
@@ -60,14 +73,24 @@ public class BackgroundCharacterController : ResettableObject
     private void Update()
     {
         if (!navMeshAgent.pathPending && navMeshAgent.remainingDistance < 0.5f)
-            GotoNextPoint();
+        {
+            if (arriveState == ArriveStates.Arrived)
+            {
+                arriveEvent?.Invoke(this);
+                arriveState = ArriveStates.ArrivedAndEventInvoked;
+            }
+            else
+            {
+                GotoNextPoint();
+            }
+        }
     }
 
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
         if (!Application.IsPlaying(this))
-        this.transform.position = waypoints[0].position;
+            this.transform.position = waypoints[0].position;
         if (isShowWaypointLine)
         {
             for (int i = 0; i < waypoints.Length; i++)
@@ -114,6 +137,10 @@ public class BackgroundCharacterController : ResettableObject
                 navMeshAgent.autoBraking = true;
             else
                 navMeshAgent.autoBraking = false;
+        }
+        else
+        {
+            arriveState = ArriveStates.Arrived;
         }
         return waypointsStep;
     }
