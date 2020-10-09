@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
+using UnityEngine.Animations;
+using System.Threading;
 
 public class GameStageManager : MonoBehaviour, IStageResettable
 {
@@ -31,18 +33,23 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     [SerializeField] private GameObject restartObject;
     [SerializeField] private GameObject menu;
     [SerializeField] private GameObject Option;
+    [SerializeField] private RectTransform menuTransform;
     [SerializeField] private Text timeBox;
     [SerializeField] bool isPause = false;
     [SerializeField] bool isPauseCheck = false;
 
-    private float restartTime = 3.99f;
+    private float restartTime = 4.7f;
     private float currentRestartTime;
 
+    [SerializeField] private Animator animator;
 
+    [SerializeField] private bool optionCheck = false;
 
     public bool PauseCheck { set { isPauseCheck = value; } get { return isPauseCheck; } }
 
     public bool Pause { set { isPause = value; } get { return isPause; } }
+
+    public bool OptionChcek { set { optionCheck = value; }get { return optionCheck; } }
     public bool IsGameOver
     {
         get => isGameOver;
@@ -82,7 +89,8 @@ public class GameStageManager : MonoBehaviour, IStageResettable
 
         currentRestartTime = restartTime;
         timeBox.text = currentRestartTime.ToString();
-
+        menuTransform = menu.GetComponent<RectTransform>();
+        animator = menu.GetComponent<Animator>();
         payloadInitPosition = payloadObject.transform.position;
     }
 
@@ -102,25 +110,25 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         if (Keyboard.current[Key.Escape].wasPressedThisFrame)
         {
             Debug.Log("esc눌림");
-            if (menuSet.activeSelf)
+            if (menuSet.activeSelf&& !optionCheck)
             {
-                menu.SetActive(false);
-                restartObject.SetActive(true);
-                Option.SetActive(false);
                 isPauseCheck = true;
-
+                
             }
-            else if (!isPauseCheck)
+            else if(!isPauseCheck && !optionCheck)
             {
                 menuSet.SetActive(true);
                 menu.SetActive(true);
                 restartObject.SetActive(false);
                 isPause = true;
+  
             }
 
         }
+        Debug.Log(menuTransform.anchoredPosition.y);
         IsPause();
         ReStart();
+  
     }
 
     public void RegisterResettableObject(ResettableObject resettableObject)
@@ -171,14 +179,20 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         //일시정지가 풀리기 전 3초 지연시간
         if (isPauseCheck && isPause)
         {
+            animator.SetBool("ESCMenuOn", false);
             currentRestartTime -= Time.unscaledDeltaTime;
+            if(currentRestartTime<3.9f)
+                restartObject.SetActive(true);
+
             if (currentRestartTime < 1)
             {
+                menu.SetActive(false);
                 isPauseCheck = false;
                 isPause = false;
                 menuSet.SetActive(false);
                 currentRestartTime = restartTime;
                 StageReset();
+                restartObject.SetActive(false);
             }
         }
     }
