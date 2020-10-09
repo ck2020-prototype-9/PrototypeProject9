@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Env_shader_car_001
+  m_Name: roadrailing
   m_Shader: {fileID: 4800000, guid: eec9ac24df601674f9fa0760250bdd02, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
-        m_Texture: {fileID: 2800000, guid: ebaa77b0ad7854e4d91e1bf103012737, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6b726a4de6bc7b347a72ec2b9502a9cc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -64,29 +64,29 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _EmissionInt: 0.5
+    - _EmissionInt: 0.25
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _MainLn: 0.5
+    - _MainLn: 0.2
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimInt: 0.15
-    - _Rimpow: 7.5
+    - _RimInt: 2.07
+    - _Rimpow: 6.74
     - _SmoothnessTextureChannel: 0
-    - _SpecInt: 0.6
-    - _Specpow: 80
+    - _SpecInt: 1.5
+    - _Specpow: 200
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
-    - _ColorB: {r: 0.08392666, g: 0.23949803, b: 0.4339623, a: 1}
-    - _ColorG: {r: 0.9528302, g: 0.6346763, b: 0.23820755, a: 1}
-    - _ColorR: {r: 0.08825044, g: 0.087620154, b: 0.103773594, a: 1}
+    - _Color: {r: 0.4433962, g: 0.14849591, b: 0.14849591, a: 1}
+    - _ColorB: {r: 1, g: 0.70173746, b: 0, a: 1}
+    - _ColorG: {r: 0.10980392, g: 0.118037835, b: 0.18039216, a: 1}
+    - _ColorR: {r: 1, g: 0.88382417, b: 0.16509432, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _RimCol: {r: 1, g: 1, b: 1, a: 1}
+    - _RimCol: {r: 0.6037736, g: 0.5724457, b: 0.5724457, a: 1}
     - _SpecCol: {r: 1, g: 1, b: 1, a: 1}

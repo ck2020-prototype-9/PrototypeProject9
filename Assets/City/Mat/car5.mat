@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: car5
-  m_Shader: {fileID: 4800000, guid: 580d07622aac65a4c943717177d10a65, type: 3}
+  m_Shader: {fileID: 4800000, guid: eec9ac24df601674f9fa0760250bdd02, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -84,9 +84,9 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 0.3066038, b: 0.3066038, a: 1}
-    - _ColorB: {r: 0.6367924, g: 0.91984916, b: 1, a: 1}
-    - _ColorG: {r: 1, g: 0.106664486, b: 0.08018869, a: 1}
-    - _ColorR: {r: 0, g: 0, b: 0, a: 1}
+    - _ColorB: {r: 0.16820934, g: 0.6582069, b: 0.7924528, a: 1}
+    - _ColorG: {r: 1, g: 0.45412576, b: 0.08962262, a: 1}
+    - _ColorR: {r: 0.10777858, g: 0.110194094, b: 0.13207549, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimCol: {r: 0.6037736, g: 0.5724457, b: 0.5724457, a: 1}
     - _SpecCol: {r: 1, g: 1, b: 1, a: 1}

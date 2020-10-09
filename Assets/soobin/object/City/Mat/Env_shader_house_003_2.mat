@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Env_shader_car_001
+  m_Name: Env_shader_house_003_2
   m_Shader: {fileID: 4800000, guid: eec9ac24df601674f9fa0760250bdd02, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -44,7 +44,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskTex:
-        m_Texture: {fileID: 2800000, guid: ebaa77b0ad7854e4d91e1bf103012737, type: 3}
+        m_Texture: {fileID: 2800000, guid: c179691aa0d31884fbdec34093229d6b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -73,20 +73,20 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimInt: 0.15
-    - _Rimpow: 7.5
+    - _RimInt: 0
+    - _Rimpow: 0
     - _SmoothnessTextureChannel: 0
-    - _SpecInt: 0.6
-    - _Specpow: 80
+    - _SpecInt: 0
+    - _Specpow: 20
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 1}
-    - _ColorB: {r: 0.08392666, g: 0.23949803, b: 0.4339623, a: 1}
-    - _ColorG: {r: 0.9528302, g: 0.6346763, b: 0.23820755, a: 1}
-    - _ColorR: {r: 0.08825044, g: 0.087620154, b: 0.103773594, a: 1}
+    - _Color: {r: 0.9339623, g: 0.73109204, b: 0.44495374, a: 1}
+    - _ColorB: {r: 0.653883, g: 0.38656995, b: 0.6886792, a: 1}
+    - _ColorG: {r: 1, g: 0.25, b: 0.25, a: 1}
+    - _ColorR: {r: 0.9339623, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimCol: {r: 1, g: 1, b: 1, a: 1}
     - _SpecCol: {r: 1, g: 1, b: 1, a: 1}
