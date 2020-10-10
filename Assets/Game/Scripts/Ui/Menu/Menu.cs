@@ -20,6 +20,7 @@ public enum ClickType
 public enum StageNumber
 {
     Null,
+    Tutorial,
     StageBack,
     Stage1,
     Stage11,
@@ -27,6 +28,7 @@ public enum StageNumber
     Stage13,
     Stage14,
     Stage15,
+    Stage16,
     Stage1Back,
 
     Stage2,
@@ -35,6 +37,7 @@ public enum StageNumber
     Stage23,
     Stage24,
     Stage25,
+    Stage26,
     Stage2Back
 }
 public class Menu : MonoBehaviour
@@ -182,11 +185,15 @@ public class Menu : MonoBehaviour
 
         switch (currentStage)
         {
+            case StageNumber.Tutorial:
+                SceneManager.LoadScene("TutorialScene");
+                break;
+
             case StageNumber.Stage1:
                 stage1Check = true;
                 break;
             case StageNumber.Stage11:
-                SceneManager.LoadScene("TutorialScene");
+               
                 break;
 
             case StageNumber.Stage12:
@@ -202,6 +209,9 @@ public class Menu : MonoBehaviour
                 break;
 
             case StageNumber.Stage15:
+
+                break;
+            case StageNumber.Stage16:
 
                 break;
 
@@ -226,6 +236,10 @@ public class Menu : MonoBehaviour
                 break;
 
             case StageNumber.Stage25:
+
+                break;
+
+            case StageNumber.Stage26:
 
                 break;
 

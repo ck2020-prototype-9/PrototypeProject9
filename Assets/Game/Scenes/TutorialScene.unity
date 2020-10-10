@@ -8529,61 +8529,25 @@ PrefabInstance:
       propertyPath: tutorialCheck
       value: 
       objectReference: {fileID: 712990242}
+    - target: {fileID: 1905479175, guid: d3ba7f5cbb06fff448b3af0275001b94, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 638165147110011419, guid: d3ba7f5cbb06fff448b3af0275001b94,
         type: 3}
       propertyPath: option
       value: 
       objectReference: {fileID: 1169213646}
-    - target: {fileID: 638165147110011419, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: optionMenu
-      value: 
-      objectReference: {fileID: 286152893}
-    - target: {fileID: 638165147110011419, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: menu
-      value: 
-      objectReference: {fileID: 674679787}
-    - target: {fileID: 743698467318820068, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 8dfc916658bf14146b29277d86c0f8ee, type: 2}
     - target: {fileID: 828399444923773406, guid: d3ba7f5cbb06fff448b3af0275001b94,
         type: 3}
       propertyPath: pause
       value: 
       objectReference: {fileID: 1169213646}
-    - target: {fileID: 1230796576445064558, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2359458144086874770, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -407
-      objectReference: {fileID: 0}
-    - target: {fileID: 2611595246142672369, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2679895572475765877, guid: d3ba7f5cbb06fff448b3af0275001b94,
         type: 3}
       propertyPath: option
       value: 
       objectReference: {fileID: 1169213646}
-    - target: {fileID: 2685232303573143577, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2685232303607029716, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2685232303647400402, guid: d3ba7f5cbb06fff448b3af0275001b94,
         type: 3}
       propertyPath: pause
@@ -8705,36 +8669,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1169213646}
     - target: {fileID: 4835273167407273940, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5368625311378072978, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6104542889030473458, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6967249131879649269, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1972478564}
-    - target: {fileID: 6967249131879649269, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnClickBack
-      objectReference: {fileID: 0}
-    - target: {fileID: 8171373061404817588, guid: d3ba7f5cbb06fff448b3af0275001b94,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9193661090193468118, guid: d3ba7f5cbb06fff448b3af0275001b94,
         type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -9743,6 +9677,7 @@ MonoBehaviour:
   timeBox: {fileID: 105306959}
   isPause: 0
   isPauseCheck: 0
+  resultMenu: {fileID: 0}
   animator: {fileID: 0}
   optionCheck: 0
 --- !u!114 &1169213649
@@ -11949,18 +11884,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1782341208}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1972478564 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 638165147110011419, guid: d3ba7f5cbb06fff448b3af0275001b94,
-    type: 3}
-  m_PrefabInstance: {fileID: 847466476}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dc6a6b0aca48344ba9f62c2194fc8cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1989514409 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2872546525162612631, guid: 84e9cd0fb8719e445b399bf2812f0093,

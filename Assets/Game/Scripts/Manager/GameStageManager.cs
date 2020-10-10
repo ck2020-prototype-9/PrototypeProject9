@@ -35,9 +35,9 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     [SerializeField] private GameObject Option;
     [SerializeField] private RectTransform menuTransform;
     [SerializeField] private Text timeBox;
-    [SerializeField] bool isPause = false;
-    [SerializeField] bool isPauseCheck = false;
-
+    [SerializeField] private bool isPause = false;
+    [SerializeField] private bool isPauseCheck = false;
+    [SerializeField] private GameObject resultMenu;
     private float restartTime = 4.7f;
     private float currentRestartTime;
 
@@ -74,7 +74,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
             if (!isGameOver && isGameClear == false && value == true)
             {
                 // TODO: 게임 클리어시 클리어 데이터 저장 구현 해야함
-
+                resultMenu.SetActive(true);
                 // 게임 클리어 연출 시작
                 gameClearDirecterManager.StartDirecting();
             }
