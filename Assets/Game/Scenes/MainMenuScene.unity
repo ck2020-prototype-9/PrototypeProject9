@@ -504,6 +504,11 @@ PrefabInstance:
       propertyPath: save
       value: 
       objectReference: {fileID: 2073482310}
+    - target: {fileID: 2685232303573143577, guid: d3ba7f5cbb06fff448b3af0275001b94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2685232303812798803, guid: d3ba7f5cbb06fff448b3af0275001b94,
         type: 3}
       propertyPath: m_Alpha
@@ -670,6 +675,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2685232305203186908, guid: d3ba7f5cbb06fff448b3af0275001b94,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835273167407273940, guid: d3ba7f5cbb06fff448b3af0275001b94,
         type: 3}
       propertyPath: m_IsActive
       value: 0
