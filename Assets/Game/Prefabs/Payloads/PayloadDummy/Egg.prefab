@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277e146fd14369d41b80e6f9da8b99e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 2145728708693300434, guid: eadf021fd0ce71d4e8327b13dd79942f, type: 3}
+  effect: {fileID: 4278350808442430545, guid: dcc581e7989cf3c4c80aa2191fd6017a, type: 3}
   audioSource: {fileID: 5594146724807596702}
   audioClips:
   - {fileID: 8300000, guid: 33367fd202857dc49b6c98a1cf29904d, type: 3}

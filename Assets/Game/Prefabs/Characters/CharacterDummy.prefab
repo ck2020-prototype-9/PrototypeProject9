@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277e146fd14369d41b80e6f9da8b99e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 2145728708693300434, guid: eadf021fd0ce71d4e8327b13dd79942f, type: 3}
+  effect: {fileID: 6958420013803525952, guid: 58b0d9f548fcf7b4c8da3338255308e3, type: 3}
   audioSource: {fileID: 6807194798894952856}
   audioClips:
   - {fileID: 8300000, guid: d765c56dfaf06da42b10dc6487a8a49c, type: 3}
@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277e146fd14369d41b80e6f9da8b99e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 2145728708693300434, guid: eadf021fd0ce71d4e8327b13dd79942f, type: 3}
+  effect: {fileID: 6958420013803525952, guid: 58b0d9f548fcf7b4c8da3338255308e3, type: 3}
   audioSource: {fileID: 6807194798894952856}
   audioClips:
   - {fileID: 8300000, guid: d765c56dfaf06da42b10dc6487a8a49c, type: 3}
@@ -799,7 +799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277e146fd14369d41b80e6f9da8b99e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effect: {fileID: 2145728708693300434, guid: eadf021fd0ce71d4e8327b13dd79942f, type: 3}
+  effect: {fileID: 6958420013803525952, guid: 58b0d9f548fcf7b4c8da3338255308e3, type: 3}
   audioSource: {fileID: 6807194798894952856}
   audioClips:
   - {fileID: 8300000, guid: d765c56dfaf06da42b10dc6487a8a49c, type: 3}
