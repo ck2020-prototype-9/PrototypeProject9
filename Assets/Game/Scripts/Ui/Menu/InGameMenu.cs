@@ -26,6 +26,7 @@ public class InGameMenu : MonoBehaviour
 
     public void OnClickExit()
     {
+        pause.GetComponent<GameStageManager>().Pause = false;
         SceneManager.LoadScene("MainMenuScene");
     }
 

@@ -48,16 +48,64 @@ public class Menu : MonoBehaviour
     [SerializeField] private CanvasGroup tutorialGroup;
 
     [SerializeField] private CanvasGroup stageGroup;
-    [SerializeField] private CanvasGroup stage1Group;
-    [SerializeField] private CanvasGroup stage2Group;
+
+    [SerializeField] private GameObject stage1Button;
+    [SerializeField] private GameObject stage2Button;
+
+
+    [SerializeField] private GameObject stage1Group;
+    [SerializeField] private GameObject stage2Group;
 
 
     [SerializeField] private Text textName;
     [SerializeField] private bool soundButtonCheck;
 
+    [SerializeField] float stage1ChangeTime=1f;
+    [SerializeField] float currentStage1ChangeTime;
+    [SerializeField] bool stage1Check;
+
+    [SerializeField] float stage2ChangeTime=1f;
+    [SerializeField] float currentStage2ChangeTime;
+    [SerializeField] bool stage2Check;
+
+    private void Awake()
+    {
+        currentStage1ChangeTime = stage1ChangeTime;
+        currentStage2ChangeTime = stage2ChangeTime;
+    }
     private void Update()
     {
-       
+       if(stage1Check)
+        {
+            currentStage1ChangeTime += Time.deltaTime;
+            if(currentStage1ChangeTime>2)
+            {
+                stage1Button.SetActive(false);
+                stage1Group.SetActive(true);
+                stage1Check = false;
+            }
+        }
+       else if(!stage1Check)
+        {
+            currentStage1ChangeTime = stage1ChangeTime;
+        }
+
+        if (stage2Check)
+        {
+            currentStage2ChangeTime += Time.deltaTime;
+            if (currentStage2ChangeTime > 2)
+            {
+                stage2Button.SetActive(false);
+                stage2Group.SetActive(true);
+                stage2Check = false;
+            }
+        }
+        else if (!stage2Check)
+        {
+            currentStage2ChangeTime = stage2ChangeTime;
+        }
+
+
     }
     public void OnClick()
     {
@@ -65,6 +113,8 @@ public class Menu : MonoBehaviour
         {
             case ClickType.Start:
                 CanvasGroupOn(stageGroup);
+                stage1Button.SetActive(true);
+                stage2Button.SetActive(true);
                 CanvasGroupOff(mainGroup);
                     Debug.Log("새게임");
                 break;
@@ -133,8 +183,7 @@ public class Menu : MonoBehaviour
         switch (currentStage)
         {
             case StageNumber.Stage1:
-                CanvasGroupOn(stage1Group);
-                CanvasGroupOff(stageGroup);
+                stage1Check = true;
                 break;
             case StageNumber.Stage11:
                 SceneManager.LoadScene("TutorialScene");
@@ -157,8 +206,7 @@ public class Menu : MonoBehaviour
                 break;
 
             case StageNumber.Stage2:
-                CanvasGroupOn(stage2Group);
-                CanvasGroupOff(stageGroup);
+                stage2Check = true;
                 break;
 
             case StageNumber.Stage21:
@@ -186,18 +234,20 @@ public class Menu : MonoBehaviour
                 break;
 
             case StageNumber.StageBack:
+                stage1Group.SetActive(false);
+                stage2Group.SetActive(false);
                 CanvasGroupOn(mainGroup);
                 CanvasGroupOff(stageGroup);
                 break;
 
             case StageNumber.Stage1Back:
                 CanvasGroupOn(stageGroup);
-                CanvasGroupOff(stage1Group);
+               // CanvasGroupOff(stage1Group);
                 break;
 
             case StageNumber.Stage2Back:
                 CanvasGroupOn(stageGroup);
-                CanvasGroupOff(stage2Group);
+              //  CanvasGroupOff(stage2Group);
                 break;
 
         }

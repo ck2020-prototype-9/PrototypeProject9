@@ -184,7 +184,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
             if(currentRestartTime<3.9f)
                 restartObject.SetActive(true);
 
-            if (currentRestartTime < 1)
+            if (currentRestartTime < -0.2f)
             {
                 menu.SetActive(false);
                 isPauseCheck = false;
