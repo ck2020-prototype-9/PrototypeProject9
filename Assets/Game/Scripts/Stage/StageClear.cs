@@ -58,7 +58,7 @@ public class StageClear : MonoBehaviour
 
     void Awake()
     {
-        uiManager = GameObject.Find("UiManager").gameObject;
+        uiManager = GameObject.Find("UiManager");
         tutorial = PlayerPrefs.GetInt("TutorialClear", 0);
         stage1_1= PlayerPrefs.GetInt("Stage1_1", 0);
         stage1_2 = PlayerPrefs.GetInt("Stage1_2", 0);

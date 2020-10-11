@@ -101,7 +101,8 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         animator = menu.GetComponent<Animator>();
         payloadInitPosition = payloadObject.transform.position;
         restartObject = GameObject.Find("Canvas").transform.Find("Menu Set").transform.Find("restart").gameObject;
-        uiManager = GameObject.Find("UiManager").gameObject;
+
+        uiManager = GameObject.Find("UiManager");
 
     }
 
