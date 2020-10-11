@@ -84,14 +84,14 @@ public class StageClear : MonoBehaviour
         stage1_3Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-3 Button").transform.Find("Image").gameObject;
         stage1_4Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-4 Button").transform.Find("Image").gameObject;
         stage1_5Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-5 Button").transform.Find("Image").gameObject;
-        stage1_6Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-6 Button").transform.Find("Image").gameObject;
+       // stage1_6Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-6 Button").transform.Find("Image").gameObject;
 
         stage2_1Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-1 Button").transform.Find("Image").gameObject;
         stage2_2Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-2 Button").transform.Find("Image").gameObject;
         stage2_3Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-3 Button").transform.Find("Image").gameObject;
         stage2_4Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-4 Button").transform.Find("Image").gameObject;
         stage2_5Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-5 Button").transform.Find("Image").gameObject;
-        stage2_6Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-6 Button").transform.Find("Image").gameObject;
+       // stage2_6Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-6 Button").transform.Find("Image").gameObject;
     }
 
     // Update is called once per frame
@@ -244,13 +244,6 @@ public class StageClear : MonoBehaviour
 
         if (stage1_5 == 1)
         {
-            stage1_6Lock.SetActive(false);
-        }
-        else
-            stage1_6Lock.SetActive(true);
-
-        if (stage1_6== 1)
-        {
             stage2_1Lock.SetActive(false);
         }
         else
@@ -283,13 +276,6 @@ public class StageClear : MonoBehaviour
         }
         else
             stage2_5Lock.SetActive(true);
-
-        if (stage2_5 == 1)
-        {
-            stage2_6Lock.SetActive(false);
-        }
-        else
-            stage2_6Lock.SetActive(true);
     }
 
    public void OnClickReSet()
@@ -303,4 +289,5 @@ public class StageClear : MonoBehaviour
         PlayerPrefs.SetInt("Stage1_6", 0);
 
     }
+
 }
