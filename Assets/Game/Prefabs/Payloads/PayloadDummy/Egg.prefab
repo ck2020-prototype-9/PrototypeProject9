@@ -146,7 +146,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   offset: {x: 0, y: 0.03, z: 0}
-  scale: {x: 0.1, y: 0.1, z: 0.1}
+  scale: {x: 0.5, y: 0.5, z: 0.5}
   leastImpulse: 0
   scalePerImpulse: 0.5
   maxScale: 2
