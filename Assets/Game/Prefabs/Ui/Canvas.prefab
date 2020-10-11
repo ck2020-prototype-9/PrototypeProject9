@@ -1476,7 +1476,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 744, y: 548}
+  m_SizeDelta: {x: 602, y: 529}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1372466972
 CanvasRenderer:
@@ -1772,7 +1772,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 744, y: 548}
+  m_SizeDelta: {x: 604, y: 526}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1491960668
 CanvasRenderer:
@@ -4006,6 +4006,176 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &997362341072366751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1497424092739249483}
+  - component: {fileID: 7064891614493646135}
+  - component: {fileID: 6427144587352396899}
+  - component: {fileID: 2290345776438094258}
+  - component: {fileID: 459833602174349658}
+  m_Layer: 5
+  m_Name: StageResetButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1497424092739249483
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997362341072366751}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6261065897377793253}
+  m_Father: {fileID: 2685232304201159551}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 750, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &7064891614493646135
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997362341072366751}
+  m_CullTransparentMesh: 0
+--- !u!114 &6427144587352396899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997362341072366751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2290345776438094258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997362341072366751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 6427144587352396899}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 459833602174349658}
+        m_MethodName: OnClickReSet
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &459833602174349658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997362341072366751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb8f1cdf191f6d489240d92bd27c7a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentStage: 0
+  tutorial: 0
+  stage1_1: 0
+  stage1_2: 0
+  stage1_3: 0
+  stage1_4: 0
+  stage1_5: 0
+  stage1_6: 0
+  stage2_1: 0
+  stage2_2: 0
+  stage2_3: 0
+  stage2_4: 0
+  stage2_5: 0
+  stage2_6: 0
+  uiManager: {fileID: 0}
+  stage1_1Lock: {fileID: 0}
+  stage1_2Lock: {fileID: 0}
+  stage1_3Lock: {fileID: 0}
+  stage1_4Lock: {fileID: 0}
+  stage1_5Lock: {fileID: 0}
+  stage1_6Lock: {fileID: 0}
+  stage2_1Lock: {fileID: 0}
+  stage2_2Lock: {fileID: 0}
+  stage2_3Lock: {fileID: 0}
+  stage2_4Lock: {fileID: 0}
+  stage2_5Lock: {fileID: 0}
+  stage2_6Lock: {fileID: 0}
 --- !u!1 &999559706108715513
 GameObject:
   m_ObjectHideFlags: 0
@@ -4294,7 +4464,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 40980e8f128756947843889b3c611b84, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33ae742f6c70b5c43b4e3cf64b956e08, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4452,6 +4622,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 5
   currentStage: 0
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 8171373061404817588}
   menu: {fileID: 2685232304478812583}
@@ -4469,6 +4640,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!114 &638165147110011419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4974,7 +5146,7 @@ GameObject:
   - component: {fileID: 8682498155994376699}
   - component: {fileID: 1748785034998311755}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5628,6 +5800,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 7
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -5645,6 +5818,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &194087453
 Animator:
   serializedVersion: 3
@@ -5679,7 +5853,7 @@ GameObject:
   - component: {fileID: 2685232303197184720}
   - component: {fileID: 1138248174}
   m_Layer: 5
-  m_Name: 'Stage2-2 Button '
+  m_Name: Stage2-2 Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5811,6 +5985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 13
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -5828,6 +6003,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &1138248174
 Animator:
   serializedVersion: 3
@@ -5936,7 +6112,7 @@ GameObject:
   - component: {fileID: 2685232303517450737}
   - component: {fileID: 1710013450}
   m_Layer: 5
-  m_Name: 'Stage1-2 Button '
+  m_Name: Stage1-2 Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6068,6 +6244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 5
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -6085,6 +6262,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &1710013450
 Animator:
   serializedVersion: 3
@@ -6251,6 +6429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 15
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -6268,6 +6447,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &63683559
 Animator:
   serializedVersion: 3
@@ -6434,6 +6614,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 4
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -6451,6 +6632,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &1937087315
 Animator:
   serializedVersion: 3
@@ -6657,6 +6839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 14
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -6674,6 +6857,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &402854666
 Animator:
   serializedVersion: 3
@@ -6840,6 +7024,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 2
   currentStage: 0
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -6857,6 +7042,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &375399715
 Animator:
   serializedVersion: 3
@@ -7317,6 +7503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 6
   currentStage: 0
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -7334,6 +7521,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &1547878009
 Animator:
   serializedVersion: 3
@@ -7632,6 +7820,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 7
   currentStage: 0
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -7649,6 +7838,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &1705817094
 Animator:
   serializedVersion: 3
@@ -7873,6 +8063,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 15
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -7890,6 +8081,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &654903274
 Animator:
   serializedVersion: 3
@@ -7947,6 +8139,7 @@ RectTransform:
   - {fileID: 5730551473616224043}
   - {fileID: 4531298659466896542}
   - {fileID: 1016658363273906887}
+  - {fileID: 1497424092739249483}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8436,6 +8629,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 12
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -8453,6 +8647,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &2051919215
 Animator:
   serializedVersion: 3
@@ -8600,8 +8795,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -86, y: 0}
-  m_SizeDelta: {x: 699, y: 521}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 553, y: 481}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2685232304524708374
 CanvasRenderer:
@@ -8708,6 +8903,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 3
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -8725,6 +8921,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &1968761826
 Animator:
   serializedVersion: 3
@@ -8782,8 +8979,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 610, y: 0}
-  m_SizeDelta: {x: 702, y: 517}
+  m_AnchoredPosition: {x: 650, y: 0}
+  m_SizeDelta: {x: 551, y: 484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2685232304563478723
 CanvasRenderer:
@@ -8890,6 +9087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 11
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -8907,6 +9105,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &15407933
 Animator:
   serializedVersion: 3
@@ -9073,6 +9272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 1
   currentStage: 0
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -9090,6 +9290,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &1654462762
 Animator:
   serializedVersion: 3
@@ -9151,7 +9352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -98, y: -4}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &2685232304626372737
@@ -9332,6 +9533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 16
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -9349,6 +9551,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &799464209
 Animator:
   serializedVersion: 3
@@ -9589,6 +9792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 8
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -9606,6 +9810,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &289092617
 Animator:
   serializedVersion: 3
@@ -9772,6 +9977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 3
   currentStage: 0
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 8171373061404817588}
   menu: {fileID: 0}
@@ -9789,6 +9995,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &1768381209
 Animator:
   serializedVersion: 3
@@ -9955,6 +10162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 6
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -9972,6 +10180,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &800399729
 Animator:
   serializedVersion: 3
@@ -10137,6 +10346,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 2
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -10154,6 +10364,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &2113743174
 Animator:
   serializedVersion: 3
@@ -10353,7 +10564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 599, y: 0}
+  m_AnchoredPosition: {x: 650, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &2685232305203186910
@@ -10533,6 +10744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 8
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -10550,6 +10762,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &869723057
 Animator:
   serializedVersion: 3
@@ -10729,7 +10942,7 @@ GameObject:
   - component: {fileID: 6057900989756463591}
   - component: {fileID: 4236186443438880389}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11014,6 +11227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 8
   currentStage: 0
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -11031,6 +11245,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!1 &3197780763249262641
 GameObject:
   m_ObjectHideFlags: 0
@@ -11760,7 +11975,7 @@ GameObject:
   - component: {fileID: 6481848572816312349}
   - component: {fileID: 5199186874803193493}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12390,7 +12605,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 545830e2a8d96e547a2a9edca6556836, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eebd917aafbe6c24b8bcc4ca07d0a078, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12468,6 +12683,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 17
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -12485,6 +12701,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &7679835032852314356
 Animator:
   serializedVersion: 3
@@ -12651,6 +12868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 9
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -12668,6 +12886,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!95 &4585123677753366395
 Animator:
   serializedVersion: 3
@@ -12797,6 +13016,84 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &5330458855799819682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6261065897377793253}
+  - component: {fileID: 6717135110413761875}
+  - component: {fileID: 872909256121564189}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &6261065897377793253
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330458855799819682}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1497424092739249483}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6717135110413761875
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330458855799819682}
+  m_CullTransparentMesh: 0
+--- !u!114 &872909256121564189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5330458855799819682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Button
 --- !u!1 &5330569140535855233
 GameObject:
   m_ObjectHideFlags: 0
@@ -13042,7 +13339,7 @@ GameObject:
   - component: {fileID: 7678510333271766854}
   - component: {fileID: 7580598412401143669}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14370,7 +14667,7 @@ GameObject:
   - component: {fileID: 250318174732064306}
   - component: {fileID: 4063854263696318326}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14547,7 +14844,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -693, y: -5}
+  m_AnchoredPosition: {x: -650, y: 0}
   m_SizeDelta: {x: 557, y: 484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6937397736438314970
@@ -14655,6 +14952,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentType: 0
   currentStage: 1
+  stageClear: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -14672,6 +14970,7 @@ MonoBehaviour:
   stage2ChangeTime: 1
   currentStage2ChangeTime: 0
   stage2Check: 0
+  uiManager: {fileID: 0}
 --- !u!1 &8171373061404817588
 GameObject:
   m_ObjectHideFlags: 0

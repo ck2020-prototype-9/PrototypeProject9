@@ -21,7 +21,9 @@ public class InGameMenu : MonoBehaviour
 
     void Awake()
     {
-        
+        pause = GameObject.Find("GameStageManager");
+        option= GameObject.Find("GameStageManager");
+
     }
 
     public void OnClickExit()

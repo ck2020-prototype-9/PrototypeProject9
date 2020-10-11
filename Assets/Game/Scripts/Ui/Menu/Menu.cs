@@ -45,6 +45,8 @@ public class Menu : MonoBehaviour
     public ClickType currentType;
     public StageNumber currentStage;
 
+    [SerializeField] StageClear stageClear;
+
     [SerializeField] private CanvasGroup mainGroup;
     [SerializeField] private GameObject optionGroup;
     [SerializeField] private GameObject menu;
@@ -71,10 +73,13 @@ public class Menu : MonoBehaviour
     [SerializeField] float currentStage2ChangeTime;
     [SerializeField] bool stage2Check;
 
+    [SerializeField] GameObject uiManager;
     private void Awake()
     {
         currentStage1ChangeTime = stage1ChangeTime;
         currentStage2ChangeTime = stage2ChangeTime;
+        uiManager = GameObject.Find("UiManager").gameObject;
+        stageClear = GameObject.Find("ClearCheckBox").GetComponent<StageClear>();
     }
     private void Update()
     {
@@ -193,26 +198,45 @@ public class Menu : MonoBehaviour
                 stage1Check = true;
                 break;
             case StageNumber.Stage11:
+                if(uiManager.GetComponent<UiManager>().savedStageCleckCheck == 1)
+                {
+
+                }
                
                 break;
 
             case StageNumber.Stage12:
-
+                if (stageClear.stage1_1==1)
+                {
+                    SceneManager.LoadScene("Stage1_2");
+                }
                 break;
 
             case StageNumber.Stage13:
-
+                if (uiManager.GetComponent<UiManager>().savedStageCleckCheck == 3)
+                {
+                    SceneManager.LoadScene("Stage1_3");
+                }          
                 break;
 
             case StageNumber.Stage14:
-
+                if (uiManager.GetComponent<UiManager>().savedStageCleckCheck == 4)
+                {
+                    SceneManager.LoadScene("Stage1_4");
+                }
                 break;
 
             case StageNumber.Stage15:
-
+                if (uiManager.GetComponent<UiManager>().savedStageCleckCheck == 5)
+                {
+                    SceneManager.LoadScene("Stage1_5");
+                }
                 break;
             case StageNumber.Stage16:
-
+                if (uiManager.GetComponent<UiManager>().savedStageCleckCheck == 6)
+                {
+                    SceneManager.LoadScene("Stage1_6");
+                }
                 break;
 
             case StageNumber.Stage2:
