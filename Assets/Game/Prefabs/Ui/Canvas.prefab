@@ -11282,6 +11282,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7201489027804328336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4854835381665703725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc6a6b0aca48344ba9f62c2194fc8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  save: {fileID: 0}
+  menuSet: {fileID: 0}
+  restartObject: {fileID: 0}
+  optionMenu: {fileID: 0}
+  menu: {fileID: 0}
+  pause: {fileID: 0}
+  option: {fileID: 0}
+  tutorialCheck: {fileID: 0}
+  optionButtomNormal: {fileID: 0}
 --- !u!1 &5072377366010173374
 GameObject:
   m_ObjectHideFlags: 0
@@ -11547,6 +11568,27 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &3411961525859766038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6086681583335861010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc6a6b0aca48344ba9f62c2194fc8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  save: {fileID: 0}
+  menuSet: {fileID: 0}
+  restartObject: {fileID: 0}
+  optionMenu: {fileID: 0}
+  menu: {fileID: 0}
+  pause: {fileID: 0}
+  option: {fileID: 0}
+  tutorialCheck: {fileID: 0}
+  optionButtomNormal: {fileID: 0}
 --- !u!1 &6571925843368178456
 GameObject:
   m_ObjectHideFlags: 0
@@ -11765,6 +11807,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6589406908588161319}
   m_CullTransparentMesh: 0
+--- !u!114 &7902918695704524856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837315237215993393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf16df46d9a7f7d488b266ad786832aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finishTime: {fileID: 0}
+  totalTime: {fileID: 0}
+  gameOverCount: {fileID: 0}
+  resetCount: {fileID: 0}
+  deliveredObjectCount: {fileID: 0}
+  fallenObjectCount: {fileID: 0}
 --- !u!1 &6878452024452186083
 GameObject:
   m_ObjectHideFlags: 0

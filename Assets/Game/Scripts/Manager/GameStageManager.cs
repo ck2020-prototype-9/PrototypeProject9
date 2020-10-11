@@ -77,13 +77,12 @@ public class GameStageManager : MonoBehaviour, IStageResettable
             if (!isGameOver && isGameClear == false && value == true)
             {
                 // TODO: 게임 클리어시 클리어 데이터 저장 구현 해야함
-                if (resultMenu != null)
-                    resultMenu.SetActive(true);
+                //if (resultMenu != null)
+                //    resultMenu.SetActive(true);
                 // 디버그용
                 var data = GameStageStatisticsManager.Instance.Data;
                 // 게임 클리어 연출 시작
                 gameClearDirecterManager.StartDirecting();
-
                 if (uiManager != null)
                     uiManager.GetComponent<UiManager>().stageClearCheck = 1;
             }
@@ -93,18 +92,29 @@ public class GameStageManager : MonoBehaviour, IStageResettable
 
     private void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-
         currentRestartTime = restartTime;
         timeBox.text = currentRestartTime.ToString();
         menuTransform = menu.GetComponent<RectTransform>();
         animator = menu.GetComponent<Animator>();
         payloadInitPosition = payloadObject.transform.position;
+    }
+
+    private void Start()
+    {
+        var canvasObject = GameObject.Find("Canvas");
+        if (canvasObject != null)
+        {
+            var resultTransform = canvasObject.transform.Find("Result");
+            if (resultTransform != null)
+                resultMenu = resultTransform.gameObject;
+        }
+        if (Instance == null)
+            Instance = this;
+        if (uiManager == null)
+        {
+            uiManager = GameObject.Find("UiManager").gameObject;
+        }
         restartObject = GameObject.Find("Canvas").transform.Find("Menu Set").transform.Find("restart").gameObject;
-
-        uiManager = GameObject.Find("UiManager");
-
     }
 
     private void Update()

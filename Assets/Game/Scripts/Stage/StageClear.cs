@@ -58,7 +58,12 @@ public class StageClear : MonoBehaviour
 
     void Awake()
     {
-        uiManager = GameObject.Find("UiManager");
+        if(uiManager=null)
+        {
+
+        }
+        uiManager = GameObject.Find("UiManager").gameObject;
+
         tutorial = PlayerPrefs.GetInt("TutorialClear", 0);
         stage1_1= PlayerPrefs.GetInt("Stage1_1", 0);
         stage1_2 = PlayerPrefs.GetInt("Stage1_2", 0);
@@ -290,5 +295,12 @@ public class StageClear : MonoBehaviour
    public void OnClickReSet()
     {
         PlayerPrefs.SetInt("TutorialClear", 0);
+        PlayerPrefs.SetInt("Stage1_1", 0);
+        PlayerPrefs.SetInt("Stage1_2", 0);
+        PlayerPrefs.SetInt("Stage1_3", 0);
+        PlayerPrefs.SetInt("Stage1_4", 0);
+        PlayerPrefs.SetInt("Stage1_5", 0);
+        PlayerPrefs.SetInt("Stage1_6", 0);
+
     }
 }

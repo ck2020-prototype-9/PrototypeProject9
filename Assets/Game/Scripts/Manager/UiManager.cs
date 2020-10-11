@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class UiManager : MonoBehaviour
 {
+    public static UiManager Instance { get; private set; }
+
     private static int count = 0;
     private int index;
     [SerializeField] Slider slider1;
@@ -50,10 +52,18 @@ public class UiManager : MonoBehaviour
     {
         //slider1 = GameObject.Find("Canvas").transform.Find("Slider1").GetComponent<Slider>();
         index = count;
-        count++;  
-            DontDestroyOnLoad(this.gameObject);
+        count++;
+        // DontDestroyOnLoad(this.gameObject);
 
-      //  savedStageCleckCheck = PlayerPrefs.GetInt("StageCheck", 0);
+        //  savedStageCleckCheck = PlayerPrefs.GetInt("StageCheck", 0);
+
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(this.gameObject);
+        }
+        else
+            Destroy(this.gameObject);
 
     }
 

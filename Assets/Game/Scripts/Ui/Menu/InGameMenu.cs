@@ -17,13 +17,23 @@ public class InGameMenu : MonoBehaviour
     [SerializeField] GameObject option;
     [SerializeField] TutorialManager tutorialCheck;
     [SerializeField] GameObject optionButtomNormal;
-   // [SerializeField] GameStageManager stageReset;
+    // [SerializeField] GameStageManager stageReset;
+
+    [SerializeField] GameObject uiManager;
 
     void Awake()
     {
         pause = GameObject.Find("GameStageManager");
         option= GameObject.Find("GameStageManager");
 
+    }
+
+    private void Update()
+    {
+        if (uiManager == null)
+        {
+            uiManager = GameObject.Find("UiManager").gameObject;
+        }
     }
 
     public void OnClickExit()
@@ -103,5 +113,18 @@ public class InGameMenu : MonoBehaviour
             menu.SetActive(true);
             menuSet.SetActive(true);
         }
+    }
+
+    public void OnClickNextStage()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+
+        int curScene = scene.buildIndex;
+
+        int nextScene = curScene + 1;
+
+        SceneManager.LoadScene(nextScene);
+
+        uiManager.GetComponent<UiManager>().stageClearCheck = 0;
     }
 }

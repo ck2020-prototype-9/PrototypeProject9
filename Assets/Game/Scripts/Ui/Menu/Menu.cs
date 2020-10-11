@@ -197,10 +197,11 @@ public class Menu : MonoBehaviour
             case StageNumber.Stage1:
                 stage1Check = true;
                 break;
-            case StageNumber.Stage11:
-                if(uiManager.GetComponent<UiManager>().savedStageCleckCheck == 1)
-                {
 
+            case StageNumber.Stage11:
+                if(stageClear.tutorial == 1)
+                {
+                    SceneManager.LoadScene("Stage1_2");
                 }
                
                 break;
@@ -208,34 +209,34 @@ public class Menu : MonoBehaviour
             case StageNumber.Stage12:
                 if (stageClear.stage1_1==1)
                 {
-                    SceneManager.LoadScene("Stage1_2");
+                    SceneManager.LoadScene("Stage1_3");
                 }
                 break;
 
             case StageNumber.Stage13:
-                if (uiManager.GetComponent<UiManager>().savedStageCleckCheck == 3)
+                if (stageClear.stage1_2 == 1)
                 {
-                    SceneManager.LoadScene("Stage1_3");
+                    SceneManager.LoadScene("Stage1_4");
                 }          
                 break;
 
             case StageNumber.Stage14:
-                if (uiManager.GetComponent<UiManager>().savedStageCleckCheck == 4)
+                if (stageClear.stage1_3 == 1)
                 {
-                    SceneManager.LoadScene("Stage1_4");
+                    SceneManager.LoadScene("Stage1_5");
                 }
                 break;
 
             case StageNumber.Stage15:
-                if (uiManager.GetComponent<UiManager>().savedStageCleckCheck == 5)
+                if (stageClear.stage1_4 == 1)
                 {
-                    SceneManager.LoadScene("Stage1_5");
+                    SceneManager.LoadScene("Stage1_6");
                 }
                 break;
             case StageNumber.Stage16:
                 if (uiManager.GetComponent<UiManager>().savedStageCleckCheck == 6)
                 {
-                    SceneManager.LoadScene("Stage1_6");
+                  
                 }
                 break;
 
