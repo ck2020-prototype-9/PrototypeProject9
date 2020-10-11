@@ -49,7 +49,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
 
     public bool Pause { set { isPause = value; } get { return isPause; } }
 
-    public bool OptionChcek { set { optionCheck = value; }get { return optionCheck; } }
+    public bool OptionChcek { set { optionCheck = value; } get { return optionCheck; } }
     public bool IsGameOver
     {
         get => isGameOver;
@@ -57,6 +57,8 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         {
             if (!isGameClear && isGameOver == false && value == true)
             {
+                GameStageStatisticsManager.Instance.Data.GameOverCount += 1;
+
                 if (tutorialManager == null || !tutorialManager.gameObject.activeSelf)
                 {
                     GameOverDirectorManager.StartDirecting();
@@ -74,7 +76,10 @@ public class GameStageManager : MonoBehaviour, IStageResettable
             if (!isGameOver && isGameClear == false && value == true)
             {
                 // TODO: 게임 클리어시 클리어 데이터 저장 구현 해야함
-                resultMenu.SetActive(true);
+                if (resultMenu != null)
+                    resultMenu.SetActive(true);
+                // 디버그용
+                var data = GameStageStatisticsManager.Instance.Data;
                 // 게임 클리어 연출 시작
                 gameClearDirecterManager.StartDirecting();
             }
@@ -110,25 +115,25 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         if (Keyboard.current[Key.Escape].wasPressedThisFrame)
         {
             Debug.Log("esc눌림");
-            if (menuSet.activeSelf&& !optionCheck)
+            if (menuSet.activeSelf && !optionCheck)
             {
                 isPauseCheck = true;
-                
+
             }
-            else if(!isPauseCheck && !optionCheck)
+            else if (!isPauseCheck && !optionCheck)
             {
                 menuSet.SetActive(true);
                 menu.SetActive(true);
                 restartObject.SetActive(false);
                 isPause = true;
-  
+
             }
 
         }
         Debug.Log(menuTransform.anchoredPosition.y);
         IsPause();
         ReStart();
-  
+
     }
 
     public void RegisterResettableObject(ResettableObject resettableObject)
@@ -157,6 +162,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         gameClearDirecterManager.StageReset();
         GameOverDirectorManager.StageReset();
         PlayerCharacterManager.StageReset();
+        GameStageStatisticsManager.Instance.StageReset();
         payloadObject = Instantiate(payloadPrefab);
         payloadObject.transform.position = payloadInitPosition;
     }
@@ -181,7 +187,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         {
             animator.SetBool("ESCMenuOn", false);
             currentRestartTime -= Time.unscaledDeltaTime;
-            if(currentRestartTime<3.9f)
+            if (currentRestartTime < 3.9f)
                 restartObject.SetActive(true);
 
             if (currentRestartTime < -0.2f)
