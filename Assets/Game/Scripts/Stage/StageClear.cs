@@ -295,5 +295,12 @@ public class StageClear : MonoBehaviour
    public void OnClickReSet()
     {
         PlayerPrefs.SetInt("TutorialClear", 0);
+        PlayerPrefs.SetInt("Stage1_1", 0);
+        PlayerPrefs.SetInt("Stage1_2", 0);
+        PlayerPrefs.SetInt("Stage1_3", 0);
+        PlayerPrefs.SetInt("Stage1_4", 0);
+        PlayerPrefs.SetInt("Stage1_5", 0);
+        PlayerPrefs.SetInt("Stage1_6", 0);
+
     }
 }
