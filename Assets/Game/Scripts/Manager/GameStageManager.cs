@@ -84,7 +84,8 @@ public class GameStageManager : MonoBehaviour, IStageResettable
                 // 게임 클리어 연출 시작
                 gameClearDirecterManager.StartDirecting();
 
-                uiManager.GetComponent<UiManager>().stageClearCheck = 1;
+                if (uiManager != null)
+                    uiManager.GetComponent<UiManager>().stageClearCheck = 1;
             }
             isGameClear = value;
         }
