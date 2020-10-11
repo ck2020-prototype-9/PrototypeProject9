@@ -83,7 +83,6 @@ public class GameStageManager : MonoBehaviour, IStageResettable
                 var data = GameStageStatisticsManager.Instance.Data;
                 // 게임 클리어 연출 시작
                 gameClearDirecterManager.StartDirecting();
-
                 uiManager.GetComponent<UiManager>().stageClearCheck = 1;
             }
             isGameClear = value;
@@ -92,6 +91,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
 
     private void Awake()
     {
+        resultMenu = GameObject.Find("Canvas").transform.Find("Result").gameObject;
         if (Instance == null)
             Instance = this;
 
@@ -102,7 +102,11 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         payloadInitPosition = payloadObject.transform.position;
         restartObject = GameObject.Find("Canvas").transform.Find("Menu Set").transform.Find("restart").gameObject;
         uiManager = GameObject.Find("UiManager").gameObject;
+        
+        if(uiManager=null)
+        {
 
+        }
     }
 
     private void Update()

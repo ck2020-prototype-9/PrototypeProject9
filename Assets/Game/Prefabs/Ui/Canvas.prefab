@@ -3165,7 +3165,7 @@ GameObject:
   - component: {fileID: 1938779380627333484}
   - component: {fileID: 5521087481723183721}
   m_Layer: 5
-  m_Name: Text (1)
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3718,7 +3718,7 @@ GameObject:
   - component: {fileID: 8075917009207601908}
   - component: {fileID: 414960594774735313}
   m_Layer: 5
-  m_Name: R count
+  m_Name: resetCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4693,7 +4693,7 @@ GameObject:
   - component: {fileID: 2097668686703011515}
   - component: {fileID: 20847778877137924}
   m_Layer: 5
-  m_Name: fallen object number
+  m_Name: fallenObjectCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4845,7 +4845,7 @@ GameObject:
   - component: {fileID: 5156658513134977780}
   - component: {fileID: 3584178352749733580}
   m_Layer: 5
-  m_Name: delevered object number
+  m_Name: deliveredObjectCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11900,7 +11900,7 @@ GameObject:
   - component: {fileID: 8773009819516527364}
   - component: {fileID: 3134904236722398532}
   m_Layer: 5
-  m_Name: time
+  m_Name: finishTime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13261,7 +13261,7 @@ GameObject:
   - component: {fileID: 6211287339552865844}
   - component: {fileID: 6540640791271847272}
   m_Layer: 5
-  m_Name: falls number
+  m_Name: gameOverCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13821,13 +13821,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1016658363273906887}
+  - component: {fileID: 7902918695704524856}
   m_Layer: 5
   m_Name: Result
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1016658363273906887
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13853,6 +13854,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &7902918695704524856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6837315237215993393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf16df46d9a7f7d488b266ad786832aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6878452024452186083
 GameObject:
   m_ObjectHideFlags: 0
