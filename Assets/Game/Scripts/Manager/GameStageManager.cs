@@ -44,6 +44,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     [SerializeField] private Animator animator;
 
     [SerializeField] private bool optionCheck = false;
+    [SerializeField] GameObject uiManager;
 
     public bool PauseCheck { set { isPauseCheck = value; } get { return isPauseCheck; } }
 
@@ -82,6 +83,8 @@ public class GameStageManager : MonoBehaviour, IStageResettable
                 var data = GameStageStatisticsManager.Instance.Data;
                 // 게임 클리어 연출 시작
                 gameClearDirecterManager.StartDirecting();
+
+                uiManager.GetComponent<UiManager>().stageClearCheck = 1;
             }
             isGameClear = value;
         }
@@ -97,6 +100,9 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         menuTransform = menu.GetComponent<RectTransform>();
         animator = menu.GetComponent<Animator>();
         payloadInitPosition = payloadObject.transform.position;
+        restartObject = GameObject.Find("Canvas").transform.Find("Menu Set").transform.Find("restart").gameObject;
+        uiManager = GameObject.Find("UiManager").gameObject;
+
     }
 
     private void Update()
@@ -130,7 +136,6 @@ public class GameStageManager : MonoBehaviour, IStageResettable
             }
 
         }
-        Debug.Log(menuTransform.anchoredPosition.y);
         IsPause();
         ReStart();
 

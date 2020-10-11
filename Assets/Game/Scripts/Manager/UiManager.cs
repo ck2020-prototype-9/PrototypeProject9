@@ -10,7 +10,19 @@ public class UiManager : MonoBehaviour
     [SerializeField] Slider slider1;
     [SerializeField] Slider slider2;
     [SerializeField] Slider slider3;
-  //  [SerializeField] Text MouseInverseName;
+    //  [SerializeField] Text MouseInverseName;
+
+    [SerializeField] public int stageClearCheck=0;
+    [SerializeField] public int savedStageCleckCheck = 0;
+
+    [SerializeField] private bool tutorialClear = false;
+    [SerializeField] private bool stage1_1Clear = false;
+    [SerializeField] private bool stage1_2Clear = false;
+    [SerializeField] private bool stage1_3Clear = false;
+    [SerializeField] private bool stage1_4Clear = false;
+    [SerializeField] private bool stage1_5Clear = false;
+    [SerializeField] private bool stage1_6Clear = false;
+
 
     public void SoundSave()
     {
@@ -40,18 +52,39 @@ public class UiManager : MonoBehaviour
         index = count;
         count++;  
             DontDestroyOnLoad(this.gameObject);
+
+      //  savedStageCleckCheck = PlayerPrefs.GetInt("StageCheck", 0);
+
     }
 
     void Start()
     {
         SoundLoad();
 
-      
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-      
+        if (slider1 == null)
+        {
+            slider1 = GameObject.Find("Canvas").transform.Find("Option Menu").transform.Find("Sound1").transform.Find("Slider1").GetComponent<Slider>();
+        }
+        else if (slider2 == null)
+        {
+            slider2 = GameObject.Find("Canvas").transform.Find("Option Menu").transform.Find("Sound2").transform.Find("Slider2").GetComponent<Slider>();
+        }
+        else if (slider3 == null)
+        {
+            slider3 = GameObject.Find("Canvas").transform.Find("Option Menu").transform.Find("Sound3").transform.Find("Slider3").GetComponent<Slider>();
+        }
+
+        if(stageClearCheck> savedStageCleckCheck)
+        {
+            //PlayerPrefs.SetInt("StageCheck", stageClearCheck);
+            //Debug.Log("스테이지 세이브");
+        }
     }
+
 }
