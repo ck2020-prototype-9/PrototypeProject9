@@ -12429,8 +12429,9 @@ GameObject:
   - component: {fileID: 1494839467463374566}
   - component: {fileID: 8559490852222369922}
   - component: {fileID: 1860251801752789170}
+  - component: {fileID: 7201489027804328336}
   m_Layer: 5
-  m_Name: Button
+  m_Name: next
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12535,7 +12536,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8559490852222369922}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7201489027804328336}
+        m_MethodName: OnClickNextStage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7201489027804328336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4854835381665703725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc6a6b0aca48344ba9f62c2194fc8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  save: {fileID: 0}
+  menuSet: {fileID: 0}
+  restartObject: {fileID: 0}
+  optionMenu: {fileID: 0}
+  menu: {fileID: 0}
+  pause: {fileID: 0}
+  option: {fileID: 0}
+  tutorialCheck: {fileID: 0}
+  optionButtomNormal: {fileID: 0}
 --- !u!1 &4907437061913535446
 GameObject:
   m_ObjectHideFlags: 0
@@ -13413,8 +13446,9 @@ GameObject:
   - component: {fileID: 7260613381988023062}
   - component: {fileID: 6175155193931229170}
   - component: {fileID: 294978805794844022}
+  - component: {fileID: 3411961525859766038}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ExitButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13519,7 +13553,39 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6175155193931229170}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3411961525859766038}
+        m_MethodName: OnClickExit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3411961525859766038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6086681583335861010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc6a6b0aca48344ba9f62c2194fc8cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  save: {fileID: 0}
+  menuSet: {fileID: 0}
+  restartObject: {fileID: 0}
+  optionMenu: {fileID: 0}
+  menu: {fileID: 0}
+  pause: {fileID: 0}
+  option: {fileID: 0}
+  tutorialCheck: {fileID: 0}
+  optionButtomNormal: {fileID: 0}
 --- !u!1 &6565569346203275868
 GameObject:
   m_ObjectHideFlags: 0
@@ -13828,7 +13894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1016658363273906887
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13866,6 +13932,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf16df46d9a7f7d488b266ad786832aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  finishTime: {fileID: 0}
+  totalTime: {fileID: 0}
+  gameOverCount: {fileID: 0}
+  resetCount: {fileID: 0}
+  deliveredObjectCount: {fileID: 0}
+  fallenObjectCount: {fileID: 0}
 --- !u!1 &6878452024452186083
 GameObject:
   m_ObjectHideFlags: 0
@@ -14017,7 +14089,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uB2E4\uC74C\uC73C\uB85C"
 --- !u!1 &7076320754078160389
 GameObject:
   m_ObjectHideFlags: 0
@@ -15338,7 +15410,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: "\uCC98\uC74C\uC73C\uB85C"
 --- !u!1 &8579624577379109821
 GameObject:
   m_ObjectHideFlags: 0

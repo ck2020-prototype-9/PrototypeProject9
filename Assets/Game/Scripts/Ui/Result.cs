@@ -19,17 +19,18 @@ public class Result : MonoBehaviour
         resetCount= GameObject.Find("Canvas").transform.Find("Result").transform.Find("count").transform.Find("resetCount").GetComponent<Text>();
         deliveredObjectCount = GameObject.Find("Canvas").transform.Find("Result").transform.Find("count").transform.Find("deliveredObjectCount").GetComponent<Text>();
         fallenObjectCount= GameObject.Find("Canvas").transform.Find("Result").transform.Find("count").transform.Find("fallenObjectCount").GetComponent<Text>();
-        
+
+        finishTime.text = "완주 시간: " + GameStageStatisticsManager.Instance.Data.Copy().FinishTime.ToString("N3");
+        totalTime.text = "총 소요 시간: " + GameStageStatisticsManager.Instance.Data.Copy().TotalTime.ToString("N3");
+        gameOverCount.text = "넘어진 횟수: " + GameStageStatisticsManager.Instance.Data.Copy().GameOverCount;
+        resetCount.text = "R키를 눌러 반복한 횟수: " + GameStageStatisticsManager.Instance.Data.Copy().ResetCount;
+        deliveredObjectCount.text = "배달한 오브젝트: " + GameStageStatisticsManager.Instance.Data.Copy().DeliveredObjectCount;
+        fallenObjectCount.text = "떨어진 오브젝트: " + GameStageStatisticsManager.Instance.Data.Copy().FallenObjectCount;
     }
 
     
     void Update()
     {
-        finishTime.text = "완주 시간: "+ GameStageStatisticsManager.Instance.Data.Copy().FinishTime;
-        totalTime.text = "총 소요 시간: " + GameStageStatisticsManager.Instance.Data.Copy().TotalTime;
-        gameOverCount.text = "넘어진 횟수: " + GameStageStatisticsManager.Instance.Data.Copy().GameOverCount;
-        resetCount.text = "R키를 눌러 반복한 횟수: " + GameStageStatisticsManager.Instance.Data.Copy().ResetCount;
-        deliveredObjectCount.text = "배달한 오브젝트: " + GameStageStatisticsManager.Instance.Data.Copy().DeliveredObjectCount;
-        fallenObjectCount.text = "떨어진 오브젝트: " + GameStageStatisticsManager.Instance.Data.Copy().FallenObjectCount;
+       
     }
 }

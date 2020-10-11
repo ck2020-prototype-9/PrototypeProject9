@@ -104,4 +104,15 @@ public class InGameMenu : MonoBehaviour
             menuSet.SetActive(true);
         }
     }
+
+    public void OnClickNextStage()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+
+        int curScene = scene.buildIndex;
+
+        int nextScene = curScene + 1;
+
+        SceneManager.LoadScene(nextScene);
+    }
 }

@@ -20,8 +20,12 @@ public class DirectorManager : MonoBehaviour, IStageResettable
             var gameOverDirectorPrefab = directingPrefabList[index];
 
             // 디렉팅 시작 (자동 시작)
-            gameOverDirectorObject = Instantiate(gameOverDirectorPrefab);
-            gameOverDirectorObject.name = directorObjectName;
+            if(gameOverDirectorObject==null)
+            {
+                gameOverDirectorObject = Instantiate(gameOverDirectorPrefab);
+                gameOverDirectorObject.name = directorObjectName;
+            }
+            
         }
         else
         {

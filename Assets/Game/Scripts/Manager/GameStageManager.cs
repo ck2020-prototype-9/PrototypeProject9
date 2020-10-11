@@ -77,8 +77,8 @@ public class GameStageManager : MonoBehaviour, IStageResettable
             if (!isGameOver && isGameClear == false && value == true)
             {
                 // TODO: 게임 클리어시 클리어 데이터 저장 구현 해야함
-                if (resultMenu != null)
-                    resultMenu.SetActive(true);
+                //if (resultMenu != null)
+                //    resultMenu.SetActive(true);
                 // 디버그용
                 var data = GameStageStatisticsManager.Instance.Data;
                 // 게임 클리어 연출 시작
