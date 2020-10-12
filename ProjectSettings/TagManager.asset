@@ -10,6 +10,7 @@ TagManager:
   - Tutorial
   - Payload
   - BasketObject
+  - MainMenu
   layers:
   - Default
   - TransparentFX
