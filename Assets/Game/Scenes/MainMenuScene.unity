@@ -22977,6 +22977,7 @@ MonoBehaviour:
   tutorialCheck: {fileID: 0}
   optionButtomNormal: {fileID: 0}
   uiManager: {fileID: 0}
+  gameOverDirector: {fileID: 0}
 --- !u!114 &1782296960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26148,6 +26149,7 @@ MonoBehaviour:
   tutorialCheck: {fileID: 0}
   optionButtomNormal: {fileID: 0}
   uiManager: {fileID: 0}
+  gameOverDirector: {fileID: 0}
 --- !u!114 &1971055726
 MonoBehaviour:
   m_ObjectHideFlags: 0

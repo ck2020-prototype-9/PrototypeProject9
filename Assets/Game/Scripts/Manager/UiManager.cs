@@ -69,6 +69,7 @@ public class UiManager : MonoBehaviour
 
     void Start()
     {
+        Debug.Log("사운드 로드");
         SoundLoad();
 
         

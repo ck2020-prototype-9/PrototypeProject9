@@ -128,8 +128,8 @@ public class Menu : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == 0)
         {
-           // if(mainMenu==null)
-           // mainMenu = GameObject.Find("Canvas").transform.Find("MenuList").gameObject;
+            if (mainMenu == null)
+                mainMenu = GameObject.FindGameObjectWithTag("MainMenu");
         }
     }
     public void OnClick()
@@ -184,8 +184,8 @@ public class Menu : MonoBehaviour
                     menu.SetActive(true);
                 }
                else
-                {    
-                    
+                {
+                    mainGroup = GameObject.FindGameObjectWithTag("MainMenu").GetComponent<CanvasGroup>();
                     CanvasGroupOn(mainGroup);
                 }
                 break;

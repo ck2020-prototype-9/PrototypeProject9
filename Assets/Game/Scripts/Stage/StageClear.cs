@@ -319,7 +319,6 @@ public class StageClear : MonoBehaviour
         PlayerPrefs.SetInt("Stage1_4", 0);
         PlayerPrefs.SetInt("Stage1_5", 0);
         PlayerPrefs.SetInt("Stage1_6", 0);
-
     }
 
 }
