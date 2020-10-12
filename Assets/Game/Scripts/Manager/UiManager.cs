@@ -24,8 +24,7 @@ public class UiManager : MonoBehaviour
     [SerializeField] private bool stage1_4Clear = false;
     [SerializeField] private bool stage1_5Clear = false;
     [SerializeField] private bool stage1_6Clear = false;
-
-
+   
     public void SoundSave()
     {
         Debug.Log("저장됌");
@@ -97,5 +96,4 @@ public class UiManager : MonoBehaviour
             //Debug.Log("스테이지 세이브");
         }
     }
-
 }
