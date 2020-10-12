@@ -100,7 +100,7 @@ Material:
     - _Parallax: 0.02
     - _RimInt: 2.07
     - _Rimpow: 6.74
-    - _Rotation: 0
+    - _Rotation: 157
     - _SmoothnessTextureChannel: 0
     - _SpecInt: 1.5
     - _Specpow: 200

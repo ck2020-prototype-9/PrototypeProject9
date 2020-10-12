@@ -251,8 +251,8 @@ MonoBehaviour:
     overrideState: 0
     value: 0
   mixerBlueOutRedIn:
-    overrideState: 0
-    value: 0
+    overrideState: 1
+    value: 2
   mixerBlueOutGreenIn:
     overrideState: 0
     value: 0
