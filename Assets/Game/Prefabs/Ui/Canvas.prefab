@@ -4553,6 +4553,7 @@ MonoBehaviour:
   currentType: 5
   currentStage: 0
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 8171373061404817588}
   menu: {fileID: 2685232304478812583}
@@ -4571,6 +4572,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!114 &638165147110011419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5732,6 +5734,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 7
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -5750,6 +5753,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &194087453
 Animator:
   serializedVersion: 3
@@ -5917,6 +5921,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 13
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -5935,6 +5940,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &1138248174
 Animator:
   serializedVersion: 3
@@ -6176,6 +6182,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 5
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -6194,6 +6201,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &1710013450
 Animator:
   serializedVersion: 3
@@ -6361,6 +6369,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 15
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -6379,6 +6388,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &63683559
 Animator:
   serializedVersion: 3
@@ -6546,6 +6556,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 4
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -6564,6 +6575,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &1937087315
 Animator:
   serializedVersion: 3
@@ -6593,7 +6605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2685232303573143576}
   m_Layer: 5
-  m_Name: Menu1
+  m_Name: MenuList
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6771,6 +6783,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 14
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -6789,6 +6802,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &402854666
 Animator:
   serializedVersion: 3
@@ -6956,6 +6970,7 @@ MonoBehaviour:
   currentType: 2
   currentStage: 0
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -6974,6 +6989,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &375399715
 Animator:
   serializedVersion: 3
@@ -7436,6 +7452,7 @@ MonoBehaviour:
   currentType: 6
   currentStage: 0
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -7454,6 +7471,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &1547878009
 Animator:
   serializedVersion: 3
@@ -7753,6 +7771,7 @@ MonoBehaviour:
   currentType: 7
   currentStage: 0
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -7771,6 +7790,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &1705817094
 Animator:
   serializedVersion: 3
@@ -7996,6 +8016,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 15
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -8014,6 +8035,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &654903274
 Animator:
   serializedVersion: 3
@@ -8563,6 +8585,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 12
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -8581,6 +8604,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &2051919215
 Animator:
   serializedVersion: 3
@@ -8837,6 +8861,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 3
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -8855,6 +8880,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &1968761826
 Animator:
   serializedVersion: 3
@@ -9021,6 +9047,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 11
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -9039,6 +9066,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &15407933
 Animator:
   serializedVersion: 3
@@ -9206,6 +9234,7 @@ MonoBehaviour:
   currentType: 1
   currentStage: 0
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -9224,6 +9253,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &1654462762
 Animator:
   serializedVersion: 3
@@ -9466,6 +9496,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 16
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -9484,6 +9515,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &799464209
 Animator:
   serializedVersion: 3
@@ -9725,6 +9757,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 8
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -9743,6 +9776,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &289092617
 Animator:
   serializedVersion: 3
@@ -9910,6 +9944,7 @@ MonoBehaviour:
   currentType: 3
   currentStage: 0
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 8171373061404817588}
   menu: {fileID: 0}
@@ -9928,6 +9963,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &1768381209
 Animator:
   serializedVersion: 3
@@ -10095,6 +10131,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 6
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -10113,6 +10150,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &800399729
 Animator:
   serializedVersion: 3
@@ -10279,6 +10317,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 2
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 2685232305190050934}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -10297,6 +10336,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &2113743174
 Animator:
   serializedVersion: 3
@@ -10411,7 +10451,7 @@ GameObject:
   - component: {fileID: 2685232305190050935}
   - component: {fileID: 2685232305190050934}
   m_Layer: 5
-  m_Name: Main Menu
+  m_Name: MainMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10676,6 +10716,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 8
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -10694,6 +10735,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!95 &869723057
 Animator:
   serializedVersion: 3
@@ -11159,6 +11201,7 @@ MonoBehaviour:
   currentType: 8
   currentStage: 0
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -11177,6 +11220,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!1 &3197780763249262641
 GameObject:
   m_ObjectHideFlags: 0
@@ -14381,6 +14425,7 @@ MonoBehaviour:
   currentType: 0
   currentStage: 1
   stageClear: {fileID: 0}
+  mainMenu: {fileID: 0}
   mainGroup: {fileID: 0}
   optionGroup: {fileID: 0}
   menu: {fileID: 0}
@@ -14399,6 +14444,7 @@ MonoBehaviour:
   currentStage2ChangeTime: 0
   stage2Check: 0
   uiManager: {fileID: 0}
+  optionCheck: {fileID: 0}
 --- !u!1 &8171373061404817588
 GameObject:
   m_ObjectHideFlags: 0

@@ -8238,6 +8238,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7004613400174391615, guid: ffafde90b5a408344bed4b2ad6da856d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7004613400218384388, guid: ffafde90b5a408344bed4b2ad6da856d,
         type: 3}
       propertyPath: payloadObject
