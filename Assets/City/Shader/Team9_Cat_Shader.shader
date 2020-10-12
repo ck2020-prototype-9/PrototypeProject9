@@ -15,6 +15,10 @@
         _MainTex ("메인 텍스처", 2D) = "black" {}
 
 
+        [Header(Main Texture)]
+        [Space(10)]
+        
+        _Emissionint ("Emission int", Range(0,2)) = 0.35
 
         [Header(Specular)]
         [Space(10)]
@@ -65,6 +69,7 @@
         };
 
         fixed _Rimonoff;
+        fixed _Emissionint;
 
         fixed4 _Color;
         fixed4 _ColorR;
@@ -90,6 +95,7 @@
 
             
             o.Albedo = d.rgb;
+            o.Emission = o.Albedo * _Emissionint;
             //o.Emission = d.rgb + (o.Albedo * _EmissionInt);
             o.Alpha = c.a;
         }
