@@ -44,7 +44,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
 
     [SerializeField] private bool optionCheck = false;
     [SerializeField] GameObject uiManager;
-
+    [SerializeField] GameObject gameOverDirector;
     public bool PauseCheck { set { isPauseCheck = value; } get { return isPauseCheck; } }
 
     public bool Pause { set { isPause = value; } get { return isPause; } }
@@ -132,6 +132,16 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         if (Keyboard.current[Key.Escape].wasPressedThisFrame)
         {
             Debug.Log("esc눌림");
+            gameOverDirector = GameObject.Find("GameOverDirector");
+            if (gameOverDirector == null)
+            {
+                Debug.Log("비어있음");
+            }
+            else
+            {
+                Destroy(gameOverDirector);
+            }
+          
             if (menuSet.activeSelf && !optionCheck)
             {
                 isPauseCheck = true;

@@ -20,7 +20,7 @@ public class InGameMenu : MonoBehaviour
     // [SerializeField] GameStageManager stageReset;
 
     [SerializeField] GameObject uiManager;
-
+    [SerializeField] GameObject gameOverDirector;
     void Awake()
     {
         pause = GameObject.Find("GameStageManager");
@@ -116,7 +116,17 @@ public class InGameMenu : MonoBehaviour
 
     public void OnClickESC()
     {
-        if(pause.GetComponent<GameStageManager>().Pause == false)
+        gameOverDirector = GameObject.Find("GameOverDirector");
+        if (gameOverDirector == null)
+        {
+            Debug.Log("비어있음");
+        }
+        else
+        {
+            Destroy(gameOverDirector);
+        }
+
+        if (pause.GetComponent<GameStageManager>().Pause == false)
         {
             pause.GetComponent<GameStageManager>().Pause = true;
             menu.SetActive(true);
