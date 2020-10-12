@@ -17,7 +17,6 @@ public class GameStageManager : MonoBehaviour, IStageResettable
     [SerializeField] TutorialManager tutorialManager;
     [SerializeField] GameObject payloadObject;
     [SerializeField] GameObject payloadPrefab;
-
     public static GameStageManager Instance { get; private set; }
     public DirectorManager GameOverDirectorManager => gameOverDirectorManager;
     public PlayerCharacterManager PlayerCharacterManager => playerCharacterManager;
@@ -114,7 +113,7 @@ public class GameStageManager : MonoBehaviour, IStageResettable
         {
             uiManager = GameObject.Find("UiManager").gameObject;
         }
-        restartObject = GameObject.Find("Canvas").transform.Find("Menu Set").transform.Find("restart").gameObject;
+        //restartObject = GameObject.Find("Canvas").transform.Find("Menu Set").transform.Find("restart").gameObject;
     }
 
     private void Update()

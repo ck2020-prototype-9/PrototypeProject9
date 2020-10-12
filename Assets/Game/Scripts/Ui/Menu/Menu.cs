@@ -46,7 +46,7 @@ public class Menu : MonoBehaviour
     public StageNumber currentStage;
 
     [SerializeField] StageClear stageClear;
-
+    [SerializeField] private GameObject mainMenu;
     [SerializeField] private CanvasGroup mainGroup;
     [SerializeField] private GameObject optionGroup;
     [SerializeField] private GameObject menu;
@@ -74,16 +74,23 @@ public class Menu : MonoBehaviour
     [SerializeField] bool stage2Check;
 
     [SerializeField] GameObject uiManager;
+    [SerializeField] GameObject optionCheck;
     private void Awake()
     {
         currentStage1ChangeTime = stage1ChangeTime;
         currentStage2ChangeTime = stage2ChangeTime;
         uiManager = GameObject.Find("UiManager").gameObject;
-        stageClear = GameObject.Find("ClearCheckBox").GetComponent<StageClear>();
+        stageClear = GameObject.Find("ClearCheckBox").GetComponent<StageClear>(); 
+    }
+
+    private void Start()
+    {
+         
     }
     private void Update()
     {
-       if(stage1Check)
+      
+        if (stage1Check)
         {
             currentStage1ChangeTime += Time.deltaTime;
             if(currentStage1ChangeTime>2)
@@ -114,6 +121,16 @@ public class Menu : MonoBehaviour
         }
 
 
+        if (optionGroup == null)
+        {
+            optionGroup = GameObject.Find("UiManager").transform.Find("Canvas").transform.Find("Option Menu").gameObject;
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+           // if(mainMenu==null)
+           // mainMenu = GameObject.Find("Canvas").transform.Find("MenuList").gameObject;
+        }
     }
     public void OnClick()
     {
@@ -157,9 +174,20 @@ public class Menu : MonoBehaviour
             case ClickType.OptionBack:
                 Debug.Log("뒤로가기");
                 GameManager.Instance.ConfigSave();
-                menu.SetActive(true);
-                CanvasGroupOn(mainGroup);
                 optionGroup.SetActive(false);
+                // if (menu != null)    
+                if (SceneManager.GetActiveScene().buildIndex!=0)
+                {
+                    optionCheck = GameObject.Find("==공용 오브젝트==").transform.Find("GameStageManager").gameObject;
+                    optionCheck.GetComponent<GameStageManager>().OptionChcek = false;
+                    menu = GameObject.Find("==공용 오브젝트==").transform.Find("Canvas").transform.Find("Menu Set").transform.Find("Menu").gameObject;
+                    menu.SetActive(true);
+                }
+               else
+                {    
+                    
+                    CanvasGroupOn(mainGroup);
+                }
                 break;
 
             case ClickType.TutorialBack:

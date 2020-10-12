@@ -28,8 +28,17 @@ public class InGameMenu : MonoBehaviour
 
     }
 
+    void Start()
+    {
+        optionMenu = GameObject.Find("UiManager").transform.Find("Canvas").transform.Find("Option Menu").gameObject;
+    }
     private void Update()
     {
+        if(optionMenu==null)
+        {
+          
+        }
+
         if (uiManager == null)
         {
             uiManager = GameObject.Find("UiManager").gameObject;

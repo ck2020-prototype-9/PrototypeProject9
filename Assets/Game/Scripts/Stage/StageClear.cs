@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public enum StageType
 {
@@ -77,23 +78,27 @@ public class StageClear : MonoBehaviour
         stage2_1 = PlayerPrefs.GetInt("Stage2_4", 0);
         stage2_1 = PlayerPrefs.GetInt("Stage2_5", 0);
         stage2_1 = PlayerPrefs.GetInt("Stage2_6", 0);
-
-
-        stage1_1Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-1 Button").transform.Find("Image").gameObject;
-        stage1_2Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-2 Button").transform.Find("Image").gameObject;
-        stage1_3Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-3 Button").transform.Find("Image").gameObject;
-        stage1_4Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-4 Button").transform.Find("Image").gameObject;
-        stage1_5Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-5 Button").transform.Find("Image").gameObject;
-       // stage1_6Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-6 Button").transform.Find("Image").gameObject;
-
-        stage2_1Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-1 Button").transform.Find("Image").gameObject;
-        stage2_2Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-2 Button").transform.Find("Image").gameObject;
-        stage2_3Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-3 Button").transform.Find("Image").gameObject;
-        stage2_4Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-4 Button").transform.Find("Image").gameObject;
-        stage2_5Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-5 Button").transform.Find("Image").gameObject;
-       // stage2_6Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-6 Button").transform.Find("Image").gameObject;
     }
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            //stage1_1Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-1 Button").transform.Find("Image").gameObject;
+            //stage1_2Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-2 Button").transform.Find("Image").gameObject;
+            //stage1_3Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-3 Button").transform.Find("Image").gameObject;
+            //stage1_4Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-4 Button").transform.Find("Image").gameObject;
+            //stage1_5Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage1Menu").transform.Find("Stage1-5 Button").transform.Find("Image").gameObject;
+          
 
+            //stage2_1Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-1 Button").transform.Find("Image").gameObject;
+            //stage2_2Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-2 Button").transform.Find("Image").gameObject;
+            //stage2_3Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-3 Button").transform.Find("Image").gameObject;
+            //stage2_4Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-4 Button").transform.Find("Image").gameObject;
+            //stage2_5Lock = GameObject.Find("Canvas").transform.Find("Menu1").transform.Find("StageMenu").transform.Find("Stage2Menu").transform.Find("Stage2-5 Button").transform.Find("Image").gameObject;
+           
+        }
+
+    }
     // Update is called once per frame
     void Update()
     {
@@ -209,73 +214,100 @@ public class StageClear : MonoBehaviour
 
         if(tutorial ==1)
         {
+            if(stage1_1Lock!=null)
             stage1_1Lock.SetActive(false);
         }
         else
-            stage1_1Lock.SetActive(true);
+        {
+            if (stage1_1Lock != null)
+                stage1_1Lock.SetActive(true);
+        }
 
         if (stage1_1==1)
         {
+            if(stage1_2Lock!=null)
             stage1_2Lock.SetActive(false);
         }
         else
-            stage1_2Lock.SetActive(true);
+        {
+            if (stage1_2Lock != null)
+                stage1_2Lock.SetActive(true);
+        }
+            
 
         if (stage1_2 == 1)
         {
+            if(stage1_3Lock!=null)
             stage1_3Lock.SetActive(false);
         }
         else
-            stage1_3Lock.SetActive(true);
+        {
+            if (stage1_3Lock != null)
+                stage1_3Lock.SetActive(true);
+        }
+            
 
         if (stage1_3 == 1)
         {
+            if(stage1_4Lock!=null)
             stage1_4Lock.SetActive(false);
         }
         else
-            stage1_4Lock.SetActive(true);
-
+        {
+            if (stage1_4Lock != null)
+                stage1_4Lock.SetActive(true);
+        }
         if (stage1_4 == 1)
         {
+            if(stage1_5Lock!=null)
             stage1_5Lock.SetActive(false);
         }
         else
-            stage1_5Lock.SetActive(true);
+        {
+            if (stage1_5Lock != null)
+           stage1_5Lock.SetActive(true);
+        }
+           
 
         if (stage1_5 == 1)
         {
+            if(stage2_1Lock!=null)
             stage2_1Lock.SetActive(false);
         }
         else
-            stage2_1Lock.SetActive(true);
-
-        if (stage2_1 == 1)
         {
-            stage2_2Lock.SetActive(false);
+            if (stage2_1Lock != null)
+                stage2_1Lock.SetActive(true);
         }
-        else
-            stage2_2Lock.SetActive(true);
+            
 
-        if (stage2_2 == 1)
-        {
-            stage2_3Lock.SetActive(false);
-        }
-        else
-            stage2_3Lock.SetActive(true);
+        //if (stage2_1 == 1)
+        //{
+        //    stage2_2Lock.SetActive(false);
+        //}
+        //else
+        //    stage2_2Lock.SetActive(true);
 
-        if (stage2_3 == 1)
-        {
-            stage2_4Lock.SetActive(false);
-        }
-        else
-            stage2_4Lock.SetActive(true);
+        //if (stage2_2 == 1)
+        //{
+        //    stage2_3Lock.SetActive(false);
+        //}
+        //else
+        //    stage2_3Lock.SetActive(true);
 
-        if (stage2_4 == 1)
-        {
-            stage2_5Lock.SetActive(false);
-        }
-        else
-            stage2_5Lock.SetActive(true);
+        //if (stage2_3 == 1)
+        //{
+        //    stage2_4Lock.SetActive(false);
+        //}
+        //else
+        //    stage2_4Lock.SetActive(true);
+
+        //if (stage2_4 == 1)
+        //{
+        //    stage2_5Lock.SetActive(false);
+        //}
+        //else
+        //    stage2_5Lock.SetActive(true);
     }
 
    public void OnClickReSet()
