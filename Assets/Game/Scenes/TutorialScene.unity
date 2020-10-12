@@ -833,6 +833,16 @@ PrefabInstance:
       propertyPath: slider3
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5696513969588580665, guid: 5dbef17b18b663b4d992b5606e2d9b2c,
+        type: 3}
+      propertyPath: camaraTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5696513969588580665, guid: 5dbef17b18b663b4d992b5606e2d9b2c,
+        type: 3}
+      propertyPath: stage1_4Clear
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5696513969588580666, guid: 5dbef17b18b663b4d992b5606e2d9b2c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14850,6 +14860,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5170067948219713103, guid: ffafde90b5a408344bed4b2ad6da856d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 7004613400174391615, guid: ffafde90b5a408344bed4b2ad6da856d,
         type: 3}
