@@ -127,6 +127,11 @@ public class GameStageManager : MonoBehaviour, IStageResettable
                 Debug.Log("스테이지 리셋");
                 StageReset();
             }
+            if (Keyboard.current[Key.F12].wasPressedThisFrame)
+            {
+                Debug.Log("치트 클리어");
+                IsGameClear = true;
+            }
         }
 
         if (Keyboard.current[Key.Escape].wasPressedThisFrame)

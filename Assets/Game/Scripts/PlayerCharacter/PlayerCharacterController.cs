@@ -89,6 +89,8 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void LegUpdate()
     {
+
+        System.Object.ReferenceEquals(this, this);
         if (!(GameStageManager.Instance.IsGameOver || GameStageManager.Instance.IsGameClear))
         {
             // 왼쪽 다리
@@ -141,6 +143,8 @@ public class PlayerCharacterController : MonoBehaviour
 
     private void BalanceUpdate()
     {
+        TryGetComponent<Transform>(out var myTransform);
+
         const float DeadZone = 0.1f;
 
         if (!(GameStageManager.Instance.IsGameOver || GameStageManager.Instance.IsGameClear))
